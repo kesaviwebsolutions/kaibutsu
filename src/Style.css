@@ -1,0 +1,241 @@
+/* *{
+    font-size: 62.5%;
+    background-color: black;
+} */
+
+/* *{
+    background-color: black;
+} */
+/* 
+*{
+    box-sizing: border-box;
+    content: "";
+} */
+
+html{
+    font-size: 100%;
+    height: 100vh;
+}
+.header1{
+  /* border: 2px solid rgb(186, 66, 172); */
+  position: relative;
+}
+.img-svg{
+    width: 57rem;
+    position: absolute;
+    right: 0;
+    /* padding-top: 2rem; */
+    /* border: 2px solid red; */
+    /* background-color: black; */
+}
+
+
+.notification-button , .add-button ,.saved-button ,.avatar{
+    width: 2rem;
+}
+li{
+    list-style-type: none;
+    margin-right: 3rem;
+}
+ul{
+    display: flex;
+}
+
+ .img1 img{
+    width: 8rem;
+    margin-right: 1rem;
+}
+
+ .img2 img{
+    width: 5rem;
+}
+.header1{
+    height: 9rem;
+    background-color: black;
+}
+.btn {
+    background-color: #ffbd29 !important;
+    border: none !important;
+    
+}
+.btn svg{
+    font-size: 3px !important;
+}
+
+.Header2 , .header2-svg svg{
+    width: 10rem;
+    margin: 1rem;
+    margin-right: 2rem;
+}
+.Header2{
+    margin-left:8rem;
+}
+.Header21{
+    background-color: #ffbd29;
+    padding: 2rem;
+}
+/* .section1{
+    border:1px solid black;
+    width:90%;
+    height: 20rem;
+}
+.section2{
+    border:1px solid black;
+} */
+
+
+/* .Header2{
+    margin: 0 14rem;
+} */
+.add ul li svg{
+    width: 1.7rem;
+}
+.add ul li{
+    list-style-type: none;
+    margin: 0 20px;
+}
+.add ul{
+    display: flex;
+}
+.box1a{
+    position: relative;
+   
+}
+
+
+.box1a svg{
+    
+    width: 5%;
+    /* position: absolute; */
+    float: right;
+    margin: 8px;
+    right: 0;
+    top: 0;
+ 
+   }
+   .box2{
+    border:1px dashed white;
+    width:95%;
+    height:30rem;
+    margin: 17% auto;
+   }
+   .box3 svg{
+    width: 15%;
+    float: right;
+    margin: 4%;
+   }
+   .Main{
+    background-color: black;
+   }
+    @media screen and (max-width:90rem) {
+        html {
+            font-size: 80%;
+        }
+        
+    }
+    @media screen and (max-width:80rem) {
+        html {
+            font-size: 70%;
+        }
+        
+    }
+
+    @media screen and (max-width:70rem) {
+        html {
+            font-size: 60%;
+        }
+        
+    }
+
+    @media screen and (max-width:60rem) {
+        html {
+            font-size: 50%;
+        }
+       
+        
+    }
+
+    @media screen and (max-width:50rem) {
+        html {
+            font-size: 45%;
+        }
+       .Box1A{
+        margin: 2rem auto !important;
+       }
+       
+    }
+
+    @media screen and (max-width:40rem) {
+        html {
+            font-size: 40%;
+        } 
+        .btn{
+            margin-left: 2rem !important;
+           }
+    }
+    @media screen and (max-width:30rem) {
+        html {
+            font-size: 35%;
+        } 
+        
+           .Header2 {
+            margin-left: 1rem;
+        }
+    }
+.first-element{
+    color: white;
+    font-size: 2rem;
+    border:1px solid white;
+    width: 20rem;
+}
+.second-element{
+    display: flex;
+}
+.second-element-img{
+    width:5rem;
+    height:5rem;
+    border:1px solid white;
+}
+.image11{
+    width:5rem;
+}
+.view{
+    margin: 1.5rem 3rem;
+    background-color: #ff9826;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    
+}
+@media screen and (max-width:700px) {
+    .first-element{
+        display: none !important;
+    }
+}
+/* .top-meme{
+    margin:1rem;
+} */
+.connect-wallet{
+       width: 14rem;
+    background-color: #ffbd29;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    /* margin: 1rem 0rem; */
+    padding: 0.4rem 0.8rem;
+}
+li svg{
+    width: 2rem;
+}
+.img-svg ul{
+    margin-top: 1rem;
+}
+.offcanvas-body{
+    text-align: center;
+    font-size: 2rem;
+}
+.offcanvas{
+    background-color: #ffbd29 !important;
+}
+.secont-element{
+    margin-bottom: 1rem !important;
+}
