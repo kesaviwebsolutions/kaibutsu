@@ -1,0 +1,22 @@
+    .quack-img img{
+        width:  9rem;
+        display: block;
+        margin: 0rem auto;
+    }
+    .quack-img1{
+        display: block;
+        margin: 0rem auto;
+    }
+    @media screen and (max-width:576px) {
+        .header1{
+            display: none;
+        }
+        .Header2-desktop{
+            display: none;
+        }
+    }
+    @media screen and (min-width:576px) {
+    .tab-nav{
+        display: none;
+    }
+    }

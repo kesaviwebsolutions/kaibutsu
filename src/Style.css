@@ -20,14 +20,15 @@ html{
   /* border: 2px solid rgb(186, 66, 172); */
   position: relative;
 }
-.img-svg{
-    width: 57rem;
+/* .img-svg{
+    width: auto;
     position: absolute;
     right: 0;
+} */
     /* padding-top: 2rem; */
     /* border: 2px solid red; */
     /* background-color: black; */
-}
+
 
 
 .notification-button , .add-button ,.saved-button ,.avatar{
@@ -48,9 +49,10 @@ ul{
 
  .img2 img{
     width: 5rem;
+    float: right;
 }
 .header1{
-    height: 9rem;
+    /* height: 9rem; */
     background-color: black;
 }
 .btn {
@@ -63,16 +65,16 @@ ul{
 }
 
 .Header2 , .header2-svg svg{
-    width: 10rem;
+    width: 9rem;
     margin: 1rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
-.Header2{
+/* .Header2{
     margin-left:8rem;
-}
+} */
 .Header21{
     background-color: #ffbd29;
-    padding: 2rem;
+    padding: 1rem;
 }
 /* .section1{
     border:1px solid black;
@@ -129,27 +131,27 @@ ul{
    }
     @media screen and (max-width:90rem) {
         html {
-            font-size: 80%;
+            font-size: 90%;
         }
         
     }
     @media screen and (max-width:80rem) {
         html {
-            font-size: 70%;
+            font-size: 75%;
         }
         
     }
 
     @media screen and (max-width:70rem) {
         html {
-            font-size: 60%;
+            font-size: 65%;
         }
         
     }
 
     @media screen and (max-width:60rem) {
         html {
-            font-size: 50%;
+            font-size: 55%;
         }
        
         
@@ -167,7 +169,7 @@ ul{
 
     @media screen and (max-width:40rem) {
         html {
-            font-size: 40%;
+            font-size: 45%;
         } 
         .btn{
             margin-left: 2rem !important;
@@ -175,7 +177,7 @@ ul{
     }
     @media screen and (max-width:30rem) {
         html {
-            font-size: 35%;
+            font-size: 45%;
         } 
         
            .Header2 {
@@ -216,7 +218,7 @@ ul{
     margin:1rem;
 } */
 .connect-wallet{
-       width: 14rem;
+       /* width: 3rem; */
     background-color: #ffbd29;
     font-size: 1.8rem;
     border-radius: 1rem;
@@ -224,7 +226,7 @@ ul{
     padding: 0.4rem 0.8rem;
 }
 li svg{
-    width: 2rem;
+    width: 1.5rem;
 }
 .img-svg ul{
     margin-top: 1rem;
@@ -238,4 +240,44 @@ li svg{
 }
 .secont-element{
     margin-bottom: 1rem !important;
+}
+
+/* ........................................................ */
+
+
+.like {
+    font: 14px/1.4 sans-serif;
+    display: inline-block;
+    padding: 3px 10px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px #0bf;
+    font-weight: bold;
+    user-select: none;
+    /* color:white */
+  }
+  .like:after {
+    content: "👍";
+    vertical-align: top;
+    margin-left: 5px;
+  }
+  
+  .is-liked {
+    background: #0bf;
+    color: #fff;
+  }
+.modal-content{
+    background-color: #ffbd29 !important;
+}
+.d-flex{
+    height: 3rem;
+    margin: auto 1.2rem;
+}
+ul ,li{
+    margin: auto 1.2rem;
+}
+.ad-banner{
+    width: 100% !important;
+    height: 5rem !important;
+    border:0.5rem dashed white !important;
+
 }

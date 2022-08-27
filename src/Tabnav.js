@@ -1,17 +1,14 @@
-import React from "react";
-import meta from "./img/meta.png";
-import wallet from "./img/connect.svg";
-import Tabnav from "./Tabnav";
-// import { IconName } from "react-icons/ai";
+import React from 'react';
+import Image1 from "./img/Quack-original-logo.png";
+import Image2 from "./img/quack.png";
 import "./Style.css";
 import "./Quack.css";
-function Header2() {
+function Tabnav() {
   return (
-    <>
-      <div className="Header21">
-        <div className="Header2-desktop">
+    <div>
+        <div className="tab-nav">
           <div className="row">
-            <div className="col-md-3 col-sm-3">
+            <div className="col-4">
               <button
                 className="btn btn-primary"
                 type="button"
@@ -33,7 +30,19 @@ function Header2() {
                 </svg>
               </button>
             </div>
-            <div className="col-md-6 col-sm-6">
+            <div className="col-4">
+              <span >
+                <img src={Image1} className='quack-img1' style={{width:"6rem"}} />
+              </span>
+            </div>
+            <div className="col-4">
+              <span className="img2">
+                <img src={Image2} style={{textAlign:"right"}} />
+              </span>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
               <span className="Header2">
                 <span className="header2-svg" id="header2-svg">
                   <svg
@@ -244,122 +253,10 @@ function Header2() {
                 </span>
               </span>
             </div>
-            <div className="col-md-3 col-sm-3">
-              <button
-                type="button"
-                className="btn-primary connect-wallet"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                style={{ display: "block", margin: "1rem auto" }}
-              >
-                connect wallet
-              </button>
-            </div>
           </div>
         </div>
-
-        {/* .................................................................................... */}
-
-        <Tabnav />
-      </div>
-
-      {/*MODAL  */}
-
-      <div
-        className="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content background">
-            <div className="modal-header">
-              <h5 className="modal-title ms-auto" id="staticBackdropLabel">
-                Please Connect Your Wallet
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body">
-              <div
-                className="wallet-images"
-                style={{
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-around",
-                }}
-              >
-                <img
-                  src={meta}
-                  alt=""
-                  className="w-25 px-3 py-3"
-                  // onClick={() => {
-                  //   Metamask()
-                  // }}
-                />
-                <img
-                  src={wallet}
-                  alt=""
-                  className="w-25 px-3 py-3"
-                  // onClick={() => {
-                  //   WalletC()
-                  // }}
-                />
-              </div>
-            </div>
-            {/* <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary autoClose"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" className="btn btn-primary">
-                  Save changes
-                </button>
-              </div> */}
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="offcanvas offcanvas-start"
-        data-bs-scroll="true"
-        data-bs-backdrop="false"
-        tabindex="-1"
-        id="offcanvasScrolling"
-        aria-labelledby="offcanvasScrollingLabel"
-      >
-        <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
-            {/* Offcanvas with body scrolling */}
-          </h5>
-          <button
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div className="offcanvas-body">
-          <div>Telegram</div>
-          <div>Twitter</div>
-          <div>Cloud chat</div>
-          <div>Whitepaper</div>
-          <div>Audit</div>
-        </div>
-      </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default Header2;
+export default Tabnav;

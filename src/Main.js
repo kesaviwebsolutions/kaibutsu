@@ -1,16 +1,118 @@
+import React from "react";
+import $ from "jquery";
 import { auto } from "@popperjs/core";
 import { Button } from "bootstrap";
-import React from "react";
-// import { Grid, Button, Container, Stack, Typography, Box } from '@mui/material';
 import Image11 from "./img/quack.png";
+import "./Style.css";
+import "./Quack.css";
+$(".like").on("click", function () {
+  var val = parseInt($(this).text(), 10);
+  $(this).toggleClass("is-liked");
+
+  if ($(this).hasClass("is-liked")) {
+    val++;
+    // User has liked (insert userId, itemId into Likes table)
+  } else {
+    val--;
+    // User removed his like (delete from table Likes where userId and itemId)
+  }
+
+  $(this).text(val);
+});
+// import { Grid, Button, Container, Stack, Typography, Box } from '@mui/material';
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>;
 function Main() {
   return (
     <div className="Main">
       <div className="row">
-        <div className="col-md-2"></div>
-        <div className="section1 col-md-7">
+        <div className="col-md-12 col-sm-12 ad-banner"></div>
+      </div>
+      <div className="row">
+        <div
+          className=" section2 col-md-3 col-sm-3"
+          style={{ marginTop: "2rem" }}
+        >
+          <div className="first-element" style={{ margin: "0.2rem auto" }}>
+            <span className="top-meme">TODAY'S TOP MEMES</span>
+            <div className="secont-element" style={{ display: "flex" }}>
+              <span>#1</span>
+              <div
+                className="second-element-img"
+                style={{
+                  width: "10rem",
+                  height: "10rem",
+                  border: "0.5px dotted white",
+                }}
+              ></div>
+              <span className="image11">
+                <img src={Image11} alt="/" style={{ width: "4rem" }} />
+              </span>
+            </div>
+            <div className="secont-element" style={{ display: "flex" }}>
+              <span>#2</span>
+              <div
+                className="second-element-img"
+                style={{
+                  width: "10rem",
+                  height: "10rem",
+                  border: "0.5px dotted white",
+                }}
+              ></div>
+              <span className="image11">
+                <img src={Image11} alt="/" style={{ width: "4rem" }} />
+              </span>
+            </div>
+            <div className="secont-element" style={{ display: "flex" }}>
+              <span>#3</span>
+              <div
+                className="second-element-img"
+                style={{
+                  width: "10rem",
+                  height: "10rem",
+                  border: "0.5px dotted white",
+                }}
+              ></div>
+              <span className="image11">
+                <img src={Image11} alt="/" style={{ width: "4rem" }} />
+              </span>
+            </div>
+            <div className="secont-element" style={{ display: "flex" }}>
+              <span>#4</span>
+              <div
+                className="second-element-img"
+                style={{
+                  width: "10rem",
+                  height: "10rem",
+                  border: "0.5px dotted white",
+                }}
+              ></div>
+              <span className="image11">
+                <img src={Image11} alt="/" style={{ width: "4rem" }} />
+              </span>
+            </div>
+            <div className="secont-element" style={{ display: "flex" }}>
+              <span>#5</span>
+              <div
+                className="second-element-img"
+                style={{
+                  width: "10rem",
+                  height: "10rem",
+                  border: "0.5px dotted white",
+                }}
+              ></div>
+              <span className="image11">
+                <img src={Image11} alt="/" style={{ width: "4rem" }} />
+              </span>
+            </div>
+            <hr />
+            <button className="view">VIEW ALL</button>
+          </div>
+        </div>
+
+        <div className="section1 col-md-6 col-sm-6">
           <div>
-            <div className="Box1A"
+            <div
+              className="Box1A"
               style={{
                 p: 2,
                 width: "90%",
@@ -81,7 +183,13 @@ function Main() {
                     </g>
                   </g>
                 </svg>
-                <svg
+                <span>
+                  <span className="like">0</span>
+                  <span className="like is-liked">3</span>
+                  <span className="like">6</span>
+                  <span className="like">12</span>
+                </span>
+                {/* <svg
                   id="Capa_2"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 110.83 46.43"
@@ -167,92 +275,14 @@ function Main() {
                       </g>
                     </g>
                   </g>
-                </svg>
+                </svg> */}
               </span>
             </div>
           </div>
         </div>
-        <div className=" section2 col-md-3" style={{marginTop:"2rem"}}>
-          <div className="first-element">
-            <span className="top-meme">TODAY'S TOP MEMES</span>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#1</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#2</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#3</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#4</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#5</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <hr/>
-            <button className="view">VIEW ALL</button>
-          </div>
-
-        </div>
+        <div className="col-md-3 col-sm-3"></div>
       </div>
     </div>
   );
 }
-
 export default Main;
