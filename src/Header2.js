@@ -27,7 +27,7 @@ function Header2() {
                   height="16"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
                   ></path>
                 </svg>
@@ -37,7 +37,7 @@ function Header2() {
               <span className="Header2">
                 <span className="header2-svg" id="header2-svg">
                   <svg
-                    onclick="myFunction()"
+                    onClick="myFunction()"
                     id="Capa_2"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 159.24 39.53"
@@ -277,7 +277,10 @@ function Header2() {
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content background">
             <div className="modal-header">
-              <h5 className="modal-title ms-auto" id="staticBackdropLabel">
+              <h5
+                className="modal-title ms-auto text-light"
+                id="staticBackdropLabel"
+              >
                 Please Connect Your Wallet
               </h5>
               <button
@@ -335,7 +338,7 @@ function Header2() {
         className="offcanvas offcanvas-start"
         data-bs-scroll="true"
         data-bs-backdrop="false"
-        tabindex="-1"
+        tabIndex="-1"
         id="offcanvasScrolling"
         aria-labelledby="offcanvasScrollingLabel"
       >

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import $ from "jquery";
 import { auto } from "@popperjs/core";
 import { Button } from "bootstrap";
-import Image11 from "./img/quack.png";
-import "./Style.css";
-import "./Quack.css";
+import Image11 from "../img/quack.png";
+import team from "../img/photo.jpg";
+import "../Style.css";
+import "../Quack.css";
+import { useNavigate } from "react-router-dom";
+
 $(".like").on("click", function () {
   var val = parseInt($(this).text(), 10);
   $(this).toggleClass("is-liked");
@@ -22,6 +25,17 @@ $(".like").on("click", function () {
 // import { Grid, Button, Container, Stack, Typography, Box } from '@mui/material';
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>;
 function Main() {
+  let navigate = useNavigate();
+
+  // useEffect(() => {
+  //   const userInfo = localStorage.getItem("userInfo");
+  //   if (userInfo) {
+  //     navigate("/shifted");
+  //   }
+  // }, [navigate]);
+
+
+  
   return (
     <div className="Main">
       <div className="row">
@@ -152,7 +166,7 @@ function Main() {
                 </svg>
               </span>
               <div className="box2" style={{ mx: "auto" }}>
-                <img src={"#"} alt="" />
+                <img src={"#"} alt="" className="h-100" />
               </div>
               <span className="box3">
                 <svg

@@ -1,31 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import Image1 from "./img/Quack-original-logo.png";
 import Image2 from "./img/quack.png";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import "./Style.css";
 import "./Quack.css";
+import SingUp from "./SignUp";
+import Login from "./Login";
+import { Link } from "react-router-dom";
+
 function Header1() {
+  const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleHide = () => setShow2(false);
+  const handleShow = () => setShow(true);
+  const handleDisplay = () => setShow2(true);
   return (
     <div className="header1">
       <div className="row">
-        <div className="col-md-3 col-sm-3">
-          <form class="d-flex" role="search" style={{ margin: "2.5rem 1rem" }}>
+        <div className=" col-lg-3 col-md-3 col-sm-3">
+          <form
+            className="d-flex"
+            role="search"
+            style={{ margin: "2.5rem 1rem" }}
+          >
             <input
-              class="form-control me-2"
+              className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-success" type="submit">
               Search
             </button>
           </form>
         </div>
-        <div className="col-md-6 col-sm-6">
+        <div className="col-lg-5 col-md-6 col-sm-6">
           <span className="quack-img">
-            <img src={Image1} />
+            <img src={Image1} alt="" />
           </span>
         </div>
-        <div className="col-md-3 col-sm-3">
+        <div className="col-lg-4 col-md-3 col-sm-3">
           <span>
             <ul style={{ margin: "2rem auto" }}>
               <li className="notification-button">
@@ -70,7 +87,27 @@ function Header1() {
                   </g>
                 </svg>
               </li>
-              <li className="avatar">
+              <li>
+                <Button
+                  onClick={handleShow}
+                  style={{ color: "#fff", fontWeight: "700" }}
+                >
+                  SIGN UP
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={handleDisplay}
+                  style={{ color: "#fff", fontWeight: "700" }}
+                >
+                  LOGIN
+                </Button>
+              </li>
+              <Link to="/shifted">
+                <li>shifted</li>
+              </Link>
+
+              {/* <li className="avatar">
                 <svg
                   id="Capa_2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,46 +132,47 @@ function Header1() {
                     </g>
                   </g>
                 </svg>
-              </li>
+              </li> */}
               <li className="img2">
-                <img src={Image2} />
+                <img src={Image2} alt="" />
               </li>
             </ul>
           </span>
         </div>
       </div>
 
-      {/* <!-- Modal --> */}
-      {/* <div
-        className="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
+      {/* <!-- Modal sign up --> */}
+
+      <Modal
+        show={show}
+        onHide={handleClose}
+        animation={false}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
       >
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title ms-auto" id="staticBackdropLabel">
-                Modal title
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body"></div>
-            <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary">Understood</button>
-      </div>
-          </div>
-        </div>
-      </div> */}
+        <Modal.Header closeButton>
+          <Modal.Title className="text-light ms-auto">SIGN UP</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <SingUp />
+        </Modal.Body>
+      </Modal>
+
+      {/* Modal login */}
+
+      <Modal
+        show={show2}
+        onHide={handleHide}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title className="text-light ms-auto">LOGIN</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Login />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }
