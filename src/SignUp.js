@@ -1,9 +1,11 @@
-import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ErrorMessage from "./ErrorMessage";
 import Loading from "./Loading";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { register } from "./actions/userActions";
 
 function SingUp() {
   const [name, setName] = useState("");
@@ -15,42 +17,25 @@ function SingUp() {
   const [pic, setPic] = useState(
     "http://localhost:3000/static/media/quack.33e582ca1919e50bb8b1.png"
   );
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+
+  let navigate = useNavigate();
+  const dispatch = useDispatch();
+  const userRegister = useSelector((state) => state.userRegister);
+  const { loading, error, userInfo } = userRegister;
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate("/shifted");
+    }
+  }, [navigate, userInfo]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (password !== confirmPassword) {
-      setMessage("Passwords do not match");
+      setMessage("Passwords do not Match");
     } else {
-      setMessage(null);
-      try {
-        const config = {
-          headers: {
-            "Content-type": "application/json",
-          },
-        };
-        setLoading(true);
-        const { data } = await axios.post(
-          "http://localhost:8000/users",
-          {
-            name,
-            email,
-            password,
-            pic,
-          },
-          config
-        );
-        console.log(data);
-        setLoading(false);
-        localStorage.setItem("userInfo", JSON.stringify(data));
-      } catch (error) {
-        setError(error.response.data.message);
-        setLoading(false);
-      }
+      dispatch(register(name, email, password, pic));
     }
-    // console.log(name, email, password, confirmPassword);
   };
 
   return (

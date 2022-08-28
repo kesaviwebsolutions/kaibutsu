@@ -3,11 +3,13 @@ import Image1 from "./img/Quack-original-logo.png";
 import Image2 from "./img/quack.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import "./Style.css";
-import "./Quack.css";
 import SingUp from "./SignUp";
 import Login from "./Login";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import "./Style.css";
+import "./Quack.css";
+import { logout } from "./actions/userActions";
 
 function Header1() {
   const [show, setShow] = useState(false);
@@ -17,6 +19,17 @@ function Header1() {
   const handleHide = () => setShow2(false);
   const handleShow = () => setShow(true);
   const handleDisplay = () => setShow2(true);
+
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin; 
+
+  const handleLogout = () => {
+    dispatch(logout())
+    navigate("/")
+  }
+
+  let navigate = useNavigate();
   return (
     <div className="header1">
       <div className="row">
@@ -134,7 +147,16 @@ function Header1() {
                 </svg>
               </li> */}
               <li className="img2">
-                <img src={Image2} alt="" />
+                <div className="dropdown">
+                  <button className="dropbtn">
+                    <img src={Image2} alt="" />
+                  </button>
+                  <div className="dropdown-content">
+                    <p style={{ cursor: "pointer" }} onClick={handleLogout}>
+                      Logout
+                    </p>
+                  </div>
+                </div>
               </li>
             </ul>
           </span>

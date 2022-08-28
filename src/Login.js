@@ -1,44 +1,30 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { login } from "./actions/userActions";
 import ErrorMessage from "./ErrorMessage";
 import Loading from "./Loading";
 
-// eslint-disable-next-line no-empty-pattern
-function Login({}) {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+
+  let navigate = useNavigate();
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.userLogin);
+  const { loading, error, userInfo } = userLogin;
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate("/shifted");
+    }
+  }, [navigate, userInfo]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(email, password);
-
-    try {
-      const config = {
-        headers: {
-          "Content-type": "application/json",
-        },
-      };
-      setLoading(true);
-      const { data } = await axios.post(
-        "http://localhost:8000/users/login",
-        {
-          email,
-          password,
-        },
-        config
-      );
-      console.log(data);
-      localStorage.setItem("userInfo", JSON.stringify(data));
-
-      setLoading(false);
-    } catch (error) {
-      setError(error.response.data.message);
-      setLoading(false);
-    }
+    dispatch(login(email, password));
   };
 
   return (
@@ -52,6 +38,7 @@ function Login({}) {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
             placeholder="Enter email"
           />
         </Form.Group>
@@ -61,6 +48,7 @@ function Login({}) {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
             placeholder="Password"
           />
         </Form.Group>
