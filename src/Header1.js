@@ -116,9 +116,9 @@ function Header1() {
                   LOGIN
                 </Button>
               </li>
-              <Link to="/shifted">
+              {/* <Link to="/shifted">
                 <li>shifted</li>
-              </Link>
+              </Link> */}
 
               {/* <li className="avatar">
                 <svg
@@ -146,7 +146,7 @@ function Header1() {
                   </g>
                 </svg>
               </li> */}
-              <li className="img2">
+              {/* <li className="img2">
                 <div className="dropdown">
                   <button className="dropbtn">
                     <img src={Image2} alt="" />
@@ -157,7 +157,7 @@ function Header1() {
                     </p>
                   </div>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </span>
         </div>
