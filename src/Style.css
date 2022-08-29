@@ -59,6 +59,7 @@ ul {
 .btn {
   background-color: #ffbd29 !important;
   border: none !important;
+  margin-top: 0.8rem !important;
 }
 .btn svg {
   font-size: 3px !important;
@@ -66,7 +67,7 @@ ul {
 
 .Header2,
 .header2-svg svg {
-  width: 9rem;
+  width: 17%;
   margin: 1rem;
   /* margin-right: 2rem; */
 }
@@ -104,7 +105,7 @@ ul {
 }
 
 .box1a svg {
-  width: 5%;
+  width: 3%;
   /* position: absolute; */
   float: right;
   margin: 8px;
@@ -254,7 +255,7 @@ li svg {
   color: #fff;
 }
 .modal-content {
-  background-image: linear-gradient(#ff9826, #ffbd29,#ff9826) !important;
+  background-image: linear-gradient(#ff9826, #ffbd29, #ff9826) !important;
 }
 .d-flex {
   height: 3rem;

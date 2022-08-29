@@ -22,12 +22,12 @@ function Header1() {
 
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin; 
+  const { userInfo } = userLogin;
 
   const handleLogout = () => {
-    dispatch(logout())
-    navigate("/")
-  }
+    dispatch(logout());
+    navigate("/");
+  };
 
   let navigate = useNavigate();
   return (
@@ -37,7 +37,7 @@ function Header1() {
           <form
             className="d-flex"
             role="search"
-            style={{ margin: "2.5rem 1rem" }}
+            style={{ margin: "2.5rem 2rem" }}
           >
             <input
               className="form-control me-2"

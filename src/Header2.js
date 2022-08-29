@@ -18,7 +18,7 @@ function Header2() {
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasScrolling"
                 aria-controls="offcanvasScrolling"
-                style={{ display: "block", margin: "1rem auto" }}
+                style={{ display: "block", marginTop: "1rem" }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ function Header2() {
                 </svg>
               </button>
             </div>
-            <div className="col-md-6 col-sm-6">
+            <div className="col-md-6 col-sm-6" style={{ marginTop: "0.6rem" }}>
               <span className="Header2">
                 <span className="header2-svg" id="header2-svg">
                   <svg
@@ -250,9 +250,19 @@ function Header2() {
                 className="btn-primary connect-wallet"
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
-                style={{ display: "block", margin: "1rem auto" }}
+                style={{
+                  display: "block",
+                  float: "right",
+                  marginTop: "1rem",
+                  fontSize: "1rem",
+                  color: " #ff9826",
+                  fontWeight: "800",
+                  border: "none",
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                }}
               >
-                connect wallet
+                CONNECT WALLET
               </button>
             </div>
           </div>

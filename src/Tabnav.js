@@ -46,7 +46,7 @@ function Tabnav() {
           </div>
         </div>
         <div className="row">
-          <div className="col-12">
+          <div className="col-12" style={{ textAlign: "center" }}>
             <span className="Header2">
               <span className="header2-svg" id="header2-svg">
                 <svg
