@@ -34,176 +34,175 @@ function Main() {
   //   }
   // }, [navigate]);
 
-
-  
   return (
     <div className="Main">
-      <div className="row">
-        <div className="col-md-12 col-sm-12 ad-banner"></div>
-      </div>
-      <div className="row">
-        <div
-          className=" section2 col-md-3 col-sm-3"
-          style={{ marginTop: "2rem" }}
-        >
-          <div className="first-element" style={{ margin: "0.2rem auto" }}>
-            <span className="top-meme">TODAY'S TOP MEMES</span>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#1</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#2</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#3</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#4</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <div className="secont-element" style={{ display: "flex" }}>
-              <span>#5</span>
-              <div
-                className="second-element-img"
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  border: "0.5px dotted white",
-                }}
-              ></div>
-              <span className="image11">
-                <img src={Image11} alt="/" style={{ width: "4rem" }} />
-              </span>
-            </div>
-            <hr />
-            <button className="view">VIEW ALL</button>
-          </div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12 col-sm-12 ad-banner"></div>
         </div>
-
-        <div className="section1 col-md-6 col-sm-6">
-          <div>
-            <div
-              className="Box1A"
-              style={{
-                p: 2,
-                width: "90%",
-                border: "1px solid grey",
-                borderRadius: "2px",
-                className: "box1",
-                mx: "auto",
-                margin: "2rem",
-              }}
-            >
-              <span className="box1a">
-                <span style={{ color: "white" }}>@Memefreak194</span>
-                <svg
-                  id="Capa_2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25.21 4.81"
-                >
-                  <g id="Capa_1-2">
-                    <g>
-                      <circle cx="2.41" cy="2.41" r="2.41" fill="#ffbd29" />
-                      <circle cx="12.61" cy="2.41" r="2.41" fill="#ffbd29" />
-                      <circle cx="22.8" cy="2.41" r="2.41" fill="#ffbd29" />
-                    </g>
-                  </g>
-                </svg>
-                <svg
-                  id="Capa_2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24.31 28.43"
-                >
-                  <g id="Capa_1-2">
-                    <path
-                      d="M0,28.43V2.35C0,1.73,.26,1.18,.78,.71c.52-.47,1.13-.71,1.82-.71H21.71c.69,0,1.3,.24,1.82,.71,.52,.47,.78,1.02,.78,1.65V28.43l-12.16-4.71L0,28.43Z"
-                      fill="#ffbd29"
-                    />
-                  </g>
-                </svg>
-              </span>
-              <div className="box2" style={{ mx: "auto" }}>
-                <img src={"#"} alt="" className="h-100" />
+        <div className="row">
+          <div
+            className=" section2 col-md-3 col-sm-3"
+            style={{ marginTop: "2rem" }}
+          >
+            <div className="first-element" style={{ margin: "0.2rem auto" }}>
+              <span className="top-meme">TODAY'S TOP MEMES</span>
+              <div className="secont-element" style={{ display: "flex" }}>
+                <span>#1</span>
+                <div
+                  className="second-element-img"
+                  style={{
+                    width: "10rem",
+                    height: "10rem",
+                    border: "0.5px dotted white",
+                  }}
+                ></div>
+                <span className="image11">
+                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                </span>
               </div>
-              <span className="box3">
-                <svg
-                  id="Capa_2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 110.83 46.43"
-                >
-                  <g id="Capa_1-2">
-                    <g>
-                      <rect
-                        x="0"
-                        width="110.83"
-                        height="46.43"
-                        rx="10.4"
-                        ry="10.4"
-                        fill="#f2f2f2"
-                      />
+              <div className="secont-element" style={{ display: "flex" }}>
+                <span>#2</span>
+                <div
+                  className="second-element-img"
+                  style={{
+                    width: "10rem",
+                    height: "10rem",
+                    border: "0.5px dotted white",
+                  }}
+                ></div>
+                <span className="image11">
+                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                </span>
+              </div>
+              <div className="secont-element" style={{ display: "flex" }}>
+                <span>#3</span>
+                <div
+                  className="second-element-img"
+                  style={{
+                    width: "10rem",
+                    height: "10rem",
+                    border: "0.5px dotted white",
+                  }}
+                ></div>
+                <span className="image11">
+                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                </span>
+              </div>
+              <div className="secont-element" style={{ display: "flex" }}>
+                <span>#4</span>
+                <div
+                  className="second-element-img"
+                  style={{
+                    width: "10rem",
+                    height: "10rem",
+                    border: "0.5px dotted white",
+                  }}
+                ></div>
+                <span className="image11">
+                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                </span>
+              </div>
+              <div className="secont-element" style={{ display: "flex" }}>
+                <span>#5</span>
+                <div
+                  className="second-element-img"
+                  style={{
+                    width: "10rem",
+                    height: "10rem",
+                    border: "0.5px dotted white",
+                  }}
+                ></div>
+                <span className="image11">
+                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                </span>
+              </div>
+              <hr />
+              <button className="view">VIEW ALL</button>
+            </div>
+          </div>
+
+          <div className="section1 col-md-6 col-sm-6">
+            <div>
+              <div
+                className="Box1A"
+                style={{
+                  p: 2,
+                  width: "90%",
+                  border: "1px solid grey",
+                  borderRadius: "2px",
+                  className: "box1",
+                  mx: "auto",
+                  margin: "2rem",
+                }}
+              >
+                <span className="box1a">
+                  <span style={{ color: "white" }}>@Memefreak194</span>
+                  <svg
+                    id="Capa_2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25.21 4.81"
+                  >
+                    <g id="Capa_1-2">
                       <g>
-                        <path
-                          d="M11.26,9.07c0-.72,.28-1.38,.84-1.96,.56-.58,1.23-.87,1.98-.87h27.79c.73,0,1.39,.29,1.96,.87,.57,.58,.87,1.23,.87,1.96V30.32c0,.73-.29,1.39-.87,1.96-.58,.57-1.24,.87-1.96,.87H18.33l-7.07,7.07V9.07Zm3.2,23.41l2.54-2.54h24.5V9.44H14.46v23.04Z"
-                          fill="#ffbd29"
-                        />
-                        <path
-                          d="M41.87,6.62c.63,0,1.19,.25,1.7,.76,.5,.5,.76,1.07,.76,1.7V30.32c0,.63-.25,1.19-.76,1.7-.5,.5-1.07,.76-1.7,.76H18.17l-6.54,6.54V9.07c0-.63,.25-1.19,.74-1.7,.49-.5,1.06-.76,1.72-.76h27.79M14.09,33.38l3.06-3.06h24.72V9.07H14.09v24.31m0,0v0M41.87,5.87H14.09c-.86,0-1.62,.33-2.25,.98-.63,.65-.95,1.39-.95,2.22V41.12l1.28-1.28,6.32-6.32h23.39c.83,0,1.58-.33,2.23-.98s.98-1.4,.98-2.23V9.07c0-.83-.33-1.58-.98-2.23s-1.4-.98-2.23-.98h0Zm-27.04,3.95h26.29V29.57H16.84l-.22,.22-1.78,1.78V9.82h0Z"
-                          fill="#fff"
-                        />
+                        <circle cx="2.41" cy="2.41" r="2.41" fill="#ffbd29" />
+                        <circle cx="12.61" cy="2.41" r="2.41" fill="#ffbd29" />
+                        <circle cx="22.8" cy="2.41" r="2.41" fill="#ffbd29" />
                       </g>
                     </g>
-                  </g>
-                </svg>
-                <span>
-                  <span className="like">0</span>
-                  <span className="like is-liked">3</span>
-                  <span className="like">6</span>
-                  <span className="like">12</span>
+                  </svg>
+                  <svg
+                    id="Capa_2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24.31 28.43"
+                  >
+                    <g id="Capa_1-2">
+                      <path
+                        d="M0,28.43V2.35C0,1.73,.26,1.18,.78,.71c.52-.47,1.13-.71,1.82-.71H21.71c.69,0,1.3,.24,1.82,.71,.52,.47,.78,1.02,.78,1.65V28.43l-12.16-4.71L0,28.43Z"
+                        fill="#ffbd29"
+                      />
+                    </g>
+                  </svg>
                 </span>
-                {/* <svg
+                <div className="box2" style={{ mx: "auto" }}>
+                  <img src={"#"} alt="" className="h-100" />
+                </div>
+                <span className="box3">
+                  <svg
+                    id="Capa_2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 110.83 46.43"
+                  >
+                    <g id="Capa_1-2">
+                      <g>
+                        <rect
+                          x="0"
+                          width="110.83"
+                          height="46.43"
+                          rx="10.4"
+                          ry="10.4"
+                          fill="#f2f2f2"
+                        />
+                        <g>
+                          <path
+                            d="M11.26,9.07c0-.72,.28-1.38,.84-1.96,.56-.58,1.23-.87,1.98-.87h27.79c.73,0,1.39,.29,1.96,.87,.57,.58,.87,1.23,.87,1.96V30.32c0,.73-.29,1.39-.87,1.96-.58,.57-1.24,.87-1.96,.87H18.33l-7.07,7.07V9.07Zm3.2,23.41l2.54-2.54h24.5V9.44H14.46v23.04Z"
+                            fill="#ffbd29"
+                          />
+                          <path
+                            d="M41.87,6.62c.63,0,1.19,.25,1.7,.76,.5,.5,.76,1.07,.76,1.7V30.32c0,.63-.25,1.19-.76,1.7-.5,.5-1.07,.76-1.7,.76H18.17l-6.54,6.54V9.07c0-.63,.25-1.19,.74-1.7,.49-.5,1.06-.76,1.72-.76h27.79M14.09,33.38l3.06-3.06h24.72V9.07H14.09v24.31m0,0v0M41.87,5.87H14.09c-.86,0-1.62,.33-2.25,.98-.63,.65-.95,1.39-.95,2.22V41.12l1.28-1.28,6.32-6.32h23.39c.83,0,1.58-.33,2.23-.98s.98-1.4,.98-2.23V9.07c0-.83-.33-1.58-.98-2.23s-1.4-.98-2.23-.98h0Zm-27.04,3.95h26.29V29.57H16.84l-.22,.22-1.78,1.78V9.82h0Z"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <span>
+                    <span className="like">0</span>
+                    <span className="like is-liked">3</span>
+                    <span className="like">6</span>
+                    <span className="like">12</span>
+                  </span>
+                  {/* <svg
                   id="Capa_2"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 110.83 46.43"
@@ -290,11 +289,12 @@ function Main() {
                     </g>
                   </g>
                 </svg> */}
-              </span>
+                </span>
+              </div>
             </div>
           </div>
+          <div className="col-md-3 col-sm-3"></div>
         </div>
-        <div className="col-md-3 col-sm-3"></div>
       </div>
     </div>
   );
