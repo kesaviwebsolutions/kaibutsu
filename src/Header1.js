@@ -105,7 +105,15 @@ function Header1() {
 
                 <li className="img2">
                   <div className="dropdown">
-                    <button className="dropbtn">
+                    <button
+                      className="dropbtn"
+                      style={{
+                        margin: "0px",
+                        border: "none",
+                        padding: "0px",
+                        backgroundColor: "black",
+                      }}
+                    >
                       <img src={Image2} alt="" />
                     </button>
                     <div className="dropdown-content">
