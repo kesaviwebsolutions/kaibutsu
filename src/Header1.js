@@ -102,7 +102,7 @@ function Header1() {
                   </svg>
                 </li>
 
-                {/* <li className="img2">
+                <li className="img2">
                   <div className="dropdown">
                     <button className="dropbtn">
                       <img src={Image2} alt="" />
@@ -118,7 +118,7 @@ function Header1() {
                       </p>
                     </div>
                   </div>
-                </li> */}
+                </li>
 
                 <>
                   <li>
