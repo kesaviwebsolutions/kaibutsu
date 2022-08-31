@@ -58,8 +58,9 @@ ul {
 }
 .btn {
   background-color: #ffbd29 !important;
-  border: none !important;
-  margin-top: 0.8rem !important;
+  /* border: none !important; */
+  /* margin-top: 0.8rem !important; */
+  margin-left: 1rem;
 }
 .btn svg {
   font-size: 3px !important;
@@ -193,11 +194,15 @@ ul {
   width: 5rem;
 }
 .view {
-  margin: 1.5rem 3rem;
+margin:1rem auto;
   background-color: #ff9826;
   border: none;
   border-radius: 1rem;
   color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: block;
+  
 }
 @media screen and (max-width: 700px) {
   .first-element {
@@ -269,4 +274,7 @@ li {
   width: 100% !important;
   height: 5rem !important;
   border: 0.5rem dashed white !important;
+}
+.btn:hover{
+  color:black
 }

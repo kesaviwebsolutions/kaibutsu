@@ -38,7 +38,7 @@ function Header1() {
             <form
               className="d-flex"
               role="search"
-              style={{ margin: "2.5rem 2rem" }}
+              style={{ margin: "2.5rem 1rem" }}
             >
               <input
                 className="form-control me-2"
@@ -143,9 +143,9 @@ function Header1() {
                   </li>
                 </>
 
-                <Link to="/shifted">
+                {/* <Link to="/shifted">
                   <li>shifted</li>
-                </Link>
+                </Link> */}
               </ul>
             </span>
           </div>

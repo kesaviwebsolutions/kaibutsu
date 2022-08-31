@@ -9,7 +9,7 @@ function Header2() {
   return (
     <>
       <div className="Header21">
-        <div className="container-fluid">
+        
           <div className="Header2-desktop">
             <div className="row">
               <div className="col-md-3 col-sm-3">
@@ -275,7 +275,7 @@ function Header2() {
           {/* .................................................................................... */}
 
           <Tabnav />
-        </div>
+       
 
         {/*MODAL  */}
 

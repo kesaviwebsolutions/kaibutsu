@@ -45,7 +45,7 @@ function Main() {
             className=" section2 col-md-3 col-sm-3"
             style={{ marginTop: "2rem" }}
           >
-            <div className="first-element" style={{ margin: "0.2rem auto" }}>
+            <div className="first-element" style={{marginLeft:"1rem"}}>
               <span className="top-meme">TODAY'S TOP MEMES</span>
               <div className="secont-element" style={{ display: "flex" }}>
                 <span>#1</span>
