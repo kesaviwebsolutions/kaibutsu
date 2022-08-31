@@ -20,10 +20,12 @@
 }
 
 .dropdown-content {
-  display: none;
+  display: block;
+  margin: auto;
   position: absolute;
   min-width: 160px;
   z-index: 1;
+  background: #fff;
 }
 
 .dropdown-content a {
@@ -31,16 +33,21 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  
+  
 }
 
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  background-color: #ffff00;
-}
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 100%;
+} */
 
 /* .dropdown:hover .dropbtn {
   background-color: #3e8e41;

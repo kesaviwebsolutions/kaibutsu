@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./Style.css";
 import "./Quack.css";
 import { logout } from "./actions/userActions";
+import Accordion from "react-bootstrap/Accordion";
 
 function Header1() {
   const [show, setShow] = useState(false);
@@ -108,6 +109,90 @@ function Header1() {
                       <img src={Image2} alt="" />
                     </button>
                     <div className="dropdown-content">
+                      <p style={{ cursor: "pointer" }}>My Profile</p>
+                      <p style={{ cursor: "pointer" }}>Saved</p>
+                      <p style={{ cursor: "pointer" }}>Setting</p>
+                      <div className="form-check form-switch">
+                      <input
+                          className="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          id="flexSwitchCheckDefault"
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexSwitchCheckDefault"
+                        >
+                          Dark Mode
+                        </label>
+                       
+                      </div>
+                      <p
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          handleLogout();
+                        }}
+                      >
+                        Download Quack
+                      </p>
+                      <p
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          handleLogout();
+                        }}
+                      >
+                        Help Center
+                      </p>
+                      <p
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          handleLogout();
+                        }}
+                      >
+                        Report Problems
+                      </p>
+                      <div>
+                        <Accordion defaultActiveKey="0 " >
+                          <Accordion.Item eventKey="0 " >
+                          <Accordion.Header className="bg-none">
+                              Terms & Policies
+                            </Accordion.Header>
+                            <Accordion.Body>
+                              Terms
+                            </Accordion.Body>
+                            <Accordion.Body>
+                              Policy
+                            </Accordion.Body>
+                            <Accordion.Body>
+                              Copyright
+                            </Accordion.Body>
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="1" >
+                            <Accordion.Header  >
+                             Advertise
+                            </Accordion.Header>
+                            <Accordion.Body>
+                              Advertise on Quack
+                            </Accordion.Body>
+                            <Accordion.Body>
+                              Reports ads
+                            </Accordion.Body>
+                           
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="1" >
+                            <Accordion.Header >
+                              Contact
+                            </Accordion.Header>
+                            <Accordion.Body>
+                              Career
+                            </Accordion.Body>
+                            <Accordion.Body>
+                              Business
+                            </Accordion.Body>
+                          </Accordion.Item>
+                        </Accordion>
+                      </div>
+           
                       <p
                         style={{ cursor: "pointer" }}
                         onClick={() => {
