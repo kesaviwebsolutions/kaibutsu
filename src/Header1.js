@@ -113,7 +113,7 @@ function Header1() {
                       <p style={{ cursor: "pointer" }}>Saved</p>
                       <p style={{ cursor: "pointer" }}>Setting</p>
                       <div className="form-check form-switch">
-                      <input
+                        <input
                           className="form-check-input"
                           type="checkbox"
                           role="switch"
@@ -125,7 +125,6 @@ function Header1() {
                         >
                           Dark Mode
                         </label>
-                       
                       </div>
                       <p
                         style={{ cursor: "pointer" }}
@@ -152,47 +151,28 @@ function Header1() {
                         Report Problems
                       </p>
                       <div>
-                        <Accordion defaultActiveKey="0 " >
-                          <Accordion.Item eventKey="0 " >
-                          <Accordion.Header className="bg-none">
+                        <Accordion defaultActiveKey="0 ">
+                          <Accordion.Item eventKey="0 ">
+                            <Accordion.Header className="bg-none">
                               Terms & Policies
                             </Accordion.Header>
-                            <Accordion.Body>
-                              Terms
-                            </Accordion.Body>
-                            <Accordion.Body>
-                              Policy
-                            </Accordion.Body>
-                            <Accordion.Body>
-                              Copyright
-                            </Accordion.Body>
+                            <Accordion.Body>Terms</Accordion.Body>
+                            <Accordion.Body>Policy</Accordion.Body>
+                            <Accordion.Body>Copyright</Accordion.Body>
                           </Accordion.Item>
-                          <Accordion.Item eventKey="1" >
-                            <Accordion.Header  >
-                             Advertise
-                            </Accordion.Header>
-                            <Accordion.Body>
-                              Advertise on Quack
-                            </Accordion.Body>
-                            <Accordion.Body>
-                              Reports ads
-                            </Accordion.Body>
-                           
+                          <Accordion.Item eventKey="1">
+                            <Accordion.Header>Advertise</Accordion.Header>
+                            <Accordion.Body>Advertise on Quack</Accordion.Body>
+                            <Accordion.Body>Reports ads</Accordion.Body>
                           </Accordion.Item>
-                          <Accordion.Item eventKey="1" >
-                            <Accordion.Header >
-                              Contact
-                            </Accordion.Header>
-                            <Accordion.Body>
-                              Career
-                            </Accordion.Body>
-                            <Accordion.Body>
-                              Business
-                            </Accordion.Body>
+                          <Accordion.Item eventKey="1">
+                            <Accordion.Header>Contact</Accordion.Header>
+                            <Accordion.Body>Career</Accordion.Body>
+                            <Accordion.Body>Business</Accordion.Body>
                           </Accordion.Item>
                         </Accordion>
                       </div>
-           
+
                       <p
                         style={{ cursor: "pointer" }}
                         onClick={() => {

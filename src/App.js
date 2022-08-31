@@ -4,6 +4,7 @@ import Header2 from "./Header2";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Shifted from "./components/pages/Shifted";
+import Profile from "./components/pages/Profile";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/shifted" element={<Shifted />} />
+          <Route exact path="/Profile" element={<Profile />} />
         </Routes>
       </Router>
     </>
