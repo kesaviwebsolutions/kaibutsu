@@ -43,3 +43,19 @@
 
   color: white;
 } */
+
+.post123 {
+  background-color: #ff9826;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  /* width: 25%; */
+  font-size: 1.5rem;
+}
+.post123 svg {
+  width: 1rem;
+  margin: 0.5rem;
+  fill: #ff9826 !important;
+}
