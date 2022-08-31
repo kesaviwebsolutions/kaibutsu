@@ -126,7 +126,11 @@ function Header1() {
                       onClick={() => {
                         handleShow();
                       }}
-                      style={{ color: "#fff", fontWeight: "700" }}
+                      style={{
+                        color: "#fff",
+                        fontWeight: "700",
+                        width: "125%",
+                      }}
                     >
                       SIGN UP
                     </Button>

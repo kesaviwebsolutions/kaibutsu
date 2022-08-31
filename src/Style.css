@@ -117,7 +117,7 @@ ul {
   border: 1px dashed white;
   width: 95%;
   height: 30rem;
-  margin: 17% auto;
+  margin: 8% auto;
 }
 .box3 svg {
   width: 15%;
@@ -189,12 +189,13 @@ ul {
   width: 5rem;
   height: 5rem;
   border: 1px solid white;
+  margin: 1rem !important;
 }
 .image11 {
   width: 5rem;
 }
 .view {
-margin:1rem auto;
+  margin: 1rem auto;
   background-color: #ff9826;
   border: none;
   border-radius: 1rem;
@@ -202,7 +203,6 @@ margin:1rem auto;
   padding: 1rem;
   font-size: 1.5rem;
   display: block;
-  
 }
 @media screen and (max-width: 700px) {
   .first-element {
@@ -269,12 +269,19 @@ li svg {
 ul,
 li {
   margin: auto 1.2rem;
+  cursor: pointer;
 }
 .ad-banner {
   width: 100% !important;
-  height: 5rem !important;
-  border: 0.5rem dashed white !important;
+  height: 15rem !important;
+  border: 0.1rem dashed white !important;
+  margin-top: 1rem !important;
+  margin-left: 1.5rem !important;
 }
-.btn:hover{
-  color:black
+.btn:hover {
+  color: black;
+}
+.number {
+  margin: 0.5rem;
+  font-size: 1.5rem;
 }

@@ -45,10 +45,10 @@ function Main() {
             className=" section2 col-md-3 col-sm-3"
             style={{ marginTop: "2rem" }}
           >
-            <div className="first-element" style={{marginLeft:"1rem"}}>
+            <div className="first-element" style={{ marginLeft: "1rem" }}>
               <span className="top-meme">TODAY'S TOP MEMES</span>
               <div className="secont-element" style={{ display: "flex" }}>
-                <span>#1</span>
+                <span className="number">#1</span>
                 <div
                   className="second-element-img"
                   style={{
@@ -62,7 +62,7 @@ function Main() {
                 </span>
               </div>
               <div className="secont-element" style={{ display: "flex" }}>
-                <span>#2</span>
+                <span className="number">#2</span>
                 <div
                   className="second-element-img"
                   style={{
@@ -76,7 +76,7 @@ function Main() {
                 </span>
               </div>
               <div className="secont-element" style={{ display: "flex" }}>
-                <span>#3</span>
+                <span className="number">#3</span>
                 <div
                   className="second-element-img"
                   style={{
@@ -90,7 +90,7 @@ function Main() {
                 </span>
               </div>
               <div className="secont-element" style={{ display: "flex" }}>
-                <span>#4</span>
+                <span className="number">#4</span>
                 <div
                   className="second-element-img"
                   style={{
@@ -104,7 +104,7 @@ function Main() {
                 </span>
               </div>
               <div className="secont-element" style={{ display: "flex" }}>
-                <span>#5</span>
+                <span className="number">#5</span>
                 <div
                   className="second-element-img"
                   style={{
@@ -137,11 +137,14 @@ function Main() {
                 }}
               >
                 <span className="box1a">
-                  <span style={{ color: "white" }}>@Memefreak194</span>
+                  <span style={{ color: "white", margin: "1rem" }}>
+                    @Memefreak194
+                  </span>
                   <svg
                     id="Capa_2"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 25.21 4.81"
+                    style={{ marginTop: "1.2rem" }}
                   >
                     <g id="Capa_1-2">
                       <g>
