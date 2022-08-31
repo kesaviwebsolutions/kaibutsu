@@ -54,7 +54,9 @@ function Header1() {
           </div>
           <div className="col-lg-5 col-md-6 col-sm-6">
             <span className="quack-img">
-              <img src={Image1} alt="" />
+              <Link to="/">
+                <img src={Image1} alt="" />
+              </Link>
             </span>
           </div>
           <div className="col-lg-4 col-md-3 col-sm-3">
@@ -117,7 +119,10 @@ function Header1() {
                       <img src={Image2} alt="" />
                     </button>
                     <div className="dropdown-content">
-                      <p style={{ cursor: "pointer" }}>My Profile</p>
+                      <Link to="/profile">
+                        {" "}
+                        <p style={{ cursor: "pointer" }}>My Profile</p>
+                      </Link>
                       <p style={{ cursor: "pointer" }}>Saved</p>
                       <p style={{ cursor: "pointer" }}>Setting</p>
                       <div className="form-check form-switch">

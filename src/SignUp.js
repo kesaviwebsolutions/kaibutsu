@@ -9,6 +9,7 @@ import { register } from "./actions/userActions";
 
 function SingUp() {
   const [name, setName] = useState("");
+  const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -34,7 +35,7 @@ function SingUp() {
     if (password !== confirmPassword) {
       setMessage("Passwords do not Match");
     } else {
-      dispatch(register(name, email, password, pic));
+      dispatch(register(name, username, email, password, pic));
     }
   };
 
@@ -52,6 +53,16 @@ function SingUp() {
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Label>User Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter username"
+            required
+            value={username}
+            onChange={(e) => setUserName(e.target.value)}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">

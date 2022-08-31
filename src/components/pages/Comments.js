@@ -1,17 +1,11 @@
 import React from "react";
 import "../../Profile.css";
 import Tab from "react-bootstrap/Tab";
-import { useDispatch, useSelector } from "react-redux";
 import Tabs from "react-bootstrap/Tabs";
 import Image70 from "../../../src/img/image-100.jpg";
 import Image80 from "../../../src/img/images-200.jpg";
-import { logout } from "../../actions/userActions";
 
-function Profile() {
-  const dispatch = useDispatch();
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
-
+function Comments() {
   return (
     <>
       <div className="outer-box" id="sy">
@@ -39,9 +33,9 @@ function Profile() {
               </div>
               <div className="col-lg-10 col-md-10 col-sm-10 col-10">
                 <div style={{ margin: "1rem" }}>
-                  {userInfo ? <h1>{userInfo.name}</h1> : ""}
+                  <span className="name1">Mayank Bhati</span>
                   <br></br>
-                  {userInfo ? <span>@{userInfo.email}</span> : ""}
+                  <span>@Memefreak194</span>
                 </div>
               </div>
             </div>
@@ -83,4 +77,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Comments;
