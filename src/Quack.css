@@ -1,6 +1,10 @@
+.container-fluid {
+  --bs-gutter-x: 0rem !important;
+}
 div .row {
   --bs-gutter-x: 0rem !important;
 }
+
 .container-fluid {
   --bs-gutter-x: 0rem !important;
 }
@@ -74,4 +78,13 @@ div .row {
   .tab-nav {
     display: none;
   }
+}
+.Upvote-intro {
+  font-size: 1.5rem;
+}
+.like-button {
+  margin: 1rem;
+}
+.dislike-button {
+  margin: 1rem;
 }

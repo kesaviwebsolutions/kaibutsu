@@ -2,6 +2,7 @@ import React from "react";
 import meta from "./img/meta.png";
 import wallet from "./img/connect.svg";
 import Tabnav from "./Tabnav";
+import Dropdown from "react-bootstrap/Dropdown";
 // import { IconName } from "react-icons/ai";
 import "./Style.css";
 import "./Quack.css";
@@ -252,7 +253,7 @@ function Header2() {
                 data-bs-target="#staticBackdrop"
                 style={{
                   display: "block",
-                  float: "right",
+                  float: "left",
                   marginTop: "1rem",
                   fontSize: "1rem",
                   color: " #ff9826",
@@ -264,6 +265,37 @@ function Header2() {
               >
                 CONNECT WALLET
               </button>
+
+              <Dropdown>
+                <Dropdown.Toggle
+                  variant="success"
+                  id="dropdown-basic"
+                  style={{
+                    display: "block",
+                    float: "left",
+                    marginTop: "1rem",
+                    fontSize: "1rem",
+                    color: " #ff9826",
+                    fontWeight: "800",
+                    border: "none",
+                    backgroundColor: "white !important",
+                    borderRadius: "10px",
+                  }}
+                  className="dropdown123"
+                >
+                  Dropdown Button
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item>Disconnect</Dropdown.Item>
+                  {/*     <Dropdown.Item href="#/action-2">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    Something else
+              </Dropdown.Item>*/}
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
         </div>

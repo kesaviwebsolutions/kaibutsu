@@ -7,6 +7,7 @@ import team from "../img/photo.jpg";
 import "../Style.css";
 import "../Quack.css";
 import { useNavigate } from "react-router-dom";
+import Upvote from "../Upvote.js";
 
 $(".like").on("click", function () {
   var val = parseInt($(this).text(), 10);
@@ -171,7 +172,8 @@ function Main() {
                   <img src={"#"} alt="" className="h-100" />
                 </div>
                 <span className="box3">
-                  <svg
+                  <Upvote />
+                  {/*     <svg
                     id="Capa_2"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 110.83 46.43"
@@ -198,13 +200,15 @@ function Main() {
                         </g>
                       </g>
                     </g>
-                  </svg>
-                  <span>
+                  </svg>}
+
+                  <Upvote />
+                  {/*<span>
                     <span className="like">0</span>
                     <span className="like is-liked">3</span>
                     <span className="like">6</span>
                     <span className="like">12</span>
-                  </span>
+              </span>*/}
                   {/* <svg
                   id="Capa_2"
                   xmlns="http://www.w3.org/2000/svg"

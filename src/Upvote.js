@@ -1,31 +1,53 @@
-import React from "react";
-
-class Upvote extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
+import React, { Component } from "react";
+import { AiOutlineLike } from "react-icons/ai";
+import { BiDislike } from "react-icons/bi";
+import "./Quack.css";
+const reduceOne = (prevState, groupName, otherGroupName) => {
+  prevState[groupName].wasClicked
+    ? (prevState[groupName].count = prevState[groupName].count - 1)
+    : (prevState[groupName].count = prevState[groupName].count + 1);
+  prevState[groupName].wasClicked = !prevState[groupName].wasClicked;
+  if (prevState[otherGroupName].wasClicked) {
+    prevState[otherGroupName].count = prevState[otherGroupName].count - 1;
+    prevState[otherGroupName].wasClicked = false;
   }
+  return prevState;
+};
 
-  increment = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
+const reducer = (action) => (prevState, props) =>
+  action.type === "TOGGLE_LIKE"
+    ? reduceOne(prevState, "like", "dislike")
+    : reduceOne(prevState, "dislike", "like");
+
+class Upvote extends Component {
+  state = {
+    like: {
+      count: 0,
+      wasClicked: false,
+    },
+    dislike: {
+      count: 0,
+      wasClicked: false,
+    },
   };
 
-  decrement = () => {
-    this.setState({
-      count: this.state.count - 1,
-    });
-  };
+  toggleLike = () => this.setState(reducer({ type: "TOGGLE_LIKE" }));
+  toggleDislike = () => this.setState(reducer({ type: "TOGGLE_DISLIKE" }));
 
   render() {
     return (
-      <div>
-        <button onClick={this.increment}>+</button>
-        <span>{this.state.count}</span>
-        <button onClick={this.decrement}>-</button>
+      <div className="Upvote">
+        <p className="Upvote-intro">
+          <span className="like-button" onClick={this.toggleLike}>
+            <AiOutlineLike size={30} color="white" />
+            <button>{this.state.like.count}</button>
+          </span>
+
+          <span className="dislike-button" onClick={this.toggleDislike}>
+            <BiDislike size={30} color="white" margin="2rem" />
+            <button>{this.state.dislike.count}</button>
+          </span>
+        </p>
       </div>
     );
   }
