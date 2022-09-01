@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import meta from "./img/meta.png";
+import { getAccount } from "./Web3/Balance";
 import wallet from "./img/connect.svg";
 import Tabnav from "./Tabnav";
-// import { IconName } from "react-icons/ai";
+import Web3 from "web3/dist/web3.min.js";
 import "./Style.css";
 import "./Quack.css";
+import { Dropdown } from "bootstrap";
+
+// for web3
+const web3 = new Web3(window.ethereum);
+console.log(web3);
+
 function Header2() {
+  const [account, setAccount] = useState("");
+
+  // connect metamask
+  const connectMetamask = async () => {
+    if (window.ethereum) {
+      const add = await window.ethereum.enable();
+      setAccount(add[0]);
+      console.log(window.ethereum);
+      window.localStorage.setItem("wallet", "metamask");
+    }
+  };
+  useEffect(() => {
+    async function check() {
+      const account = await getAccount();
+      web3.eth.getBalance(account);
+      setAccount(account);
+    }
+    check();
+  }, []);
+
   return (
     <>
       <div className="Header21">
@@ -262,7 +289,9 @@ function Header2() {
                   borderRadius: "10px",
                 }}
               >
-                CONNECT WALLET
+                {account
+                  ? account.slice(0, 4) + "..." + account.slice(38)
+                  : "Connect Wallet"}
               </button>
             </div>
           </div>
@@ -310,6 +339,7 @@ function Header2() {
                   }}
                 >
                   <img
+                    onClick={connectMetamask}
                     src={meta}
                     alt=""
                     className="w-25 px-3 py-3"
