@@ -1,6 +1,9 @@
 div .row {
   --bs-gutter-x: 0rem !important;
 }
+.container-fluid {
+  --bs-gutter-x: 0rem !important;
+}
 
 .inner-box {
   border-radius: 7px;

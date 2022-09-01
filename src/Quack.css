@@ -1,6 +1,9 @@
 div .row {
   --bs-gutter-x: 0rem !important;
 }
+.container-fluid {
+  --bs-gutter-x: 0rem !important;
+}
 
 .quack-img img {
   width: 9rem;
