@@ -35,7 +35,7 @@ function Header1() {
     <div className="header1">
       <div className="container-fluid">
         <div className="row">
-          <div className=" col-lg-3 col-md-3 col-sm-3">
+          <div className="col-lg-3 col-md-3 col-sm-3">
             <form
               className="d-flex"
               role="search"
@@ -178,7 +178,7 @@ function Header1() {
                             <Accordion.Body>Advertise on Quack</Accordion.Body>
                             <Accordion.Body>Reports ads</Accordion.Body>
                           </Accordion.Item>
-                          <Accordion.Item eventKey="1">
+                          <Accordion.Item eventKey="2">
                             <Accordion.Header>Contact</Accordion.Header>
                             <Accordion.Body>Career</Accordion.Body>
                             <Accordion.Body>Business</Accordion.Body>

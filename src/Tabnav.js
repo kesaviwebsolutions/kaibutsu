@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Image1 from "./img/Quack-original-logo.png";
 import Image2 from "./img/quack.png";
 import "./Style.css";
 import "./Quack.css";
+import { logout } from "./actions/userActions";
+import Accordion from "react-bootstrap/Accordion";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import SingUp from "./SignUp";
+import Login from "./Login";
 function Tabnav() {
+  const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleHide = () => setShow2(false);
+  const handleShow = () => setShow(true);
+  const handleDisplay = () => setShow2(true);
+
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/");
+  };
+
+  let navigate = useNavigate();
   return (
     <div>
       <div className="tab-nav">
@@ -40,9 +66,158 @@ function Tabnav() {
             </span>
           </div>
           <div className="col-4">
-            <span className="img2">
-              <img src={Image2} style={{ textAlign: "right" }} />
-            </span>
+            <ul>
+              <li className="img2">
+                <div className="dropdown">
+                  <button
+                    className="dropbtn"
+                    style={{
+                      margin: "0px",
+                      border: "none",
+                      padding: "0px",
+                      backgroundColor: "black",
+                    }}
+                  >
+                    <img src={Image2} alt="" />
+                  </button>
+                  <div className="dropdown-content">
+                    <Link to="/profile">
+                      {" "}
+                      <p style={{ cursor: "pointer" }}>My Profile</p>
+                    </Link>
+                    <p style={{ cursor: "pointer" }}>Saved</p>
+                    <p style={{ cursor: "pointer" }}>Setting</p>
+                    <div className="form-check form-switch">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="flexSwitchCheckDefault"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="flexSwitchCheckDefault"
+                      >
+                        Dark Mode
+                      </label>
+                    </div>
+                    <p
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                    >
+                      Download Quack
+                    </p>
+                    <p
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                    >
+                      Help Center
+                    </p>
+                    <p
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                    >
+                      Report Problems
+                    </p>
+                    <div>
+                      <Accordion defaultActiveKey="0 ">
+                        <Accordion.Item eventKey="0 ">
+                          <Accordion.Header className="bg-none">
+                            Terms & Policies
+                          </Accordion.Header>
+                          <Accordion.Body>Terms</Accordion.Body>
+                          <Accordion.Body>Policy</Accordion.Body>
+                          <Accordion.Body>Copyright</Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                          <Accordion.Header>Advertise</Accordion.Header>
+                          <Accordion.Body>Advertise on Quack</Accordion.Body>
+                          <Accordion.Body>Reports ads</Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="2">
+                          <Accordion.Header>Contact</Accordion.Header>
+                          <Accordion.Body>Career</Accordion.Body>
+                          <Accordion.Body>Business</Accordion.Body>
+                        </Accordion.Item>
+                      </Accordion>
+                    </div>
+
+                    <p
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        handleLogout();
+                      }}
+                    >
+                      Logout
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <Button
+                  onClick={() => {
+                    handleShow();
+                  }}
+                  style={{
+                    color: "#fff",
+                    fontWeight: "700",
+                    width: "125%",
+                  }}
+                >
+                  SIGN UP
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={() => {
+                    handleDisplay();
+                  }}
+                  style={{ color: "#fff", fontWeight: "700" }}
+                >
+                  LOGIN
+                </Button>
+              </li>
+            </ul>
+            {/* <!-- Modal sign up --> */}
+
+            <Modal
+              show={show}
+              onHide={handleClose}
+              animation={false}
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="text-light ms-auto">
+                  SIGN UP
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <SingUp />
+              </Modal.Body>
+            </Modal>
+
+            {/* Modal login */}
+
+            <Modal
+              show={show2}
+              onHide={handleHide}
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="text-light ms-auto">LOGIN</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Login />
+              </Modal.Body>
+            </Modal>
           </div>
         </div>
         <div className="row">
