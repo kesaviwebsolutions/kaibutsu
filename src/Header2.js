@@ -7,7 +7,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Web3 from "web3/dist/web3.min.js";
 import "./Style.css";
 import "./Quack.css";
-import { Dropdown } from "bootstrap";
+// import { Dropdown } from "bootstrap";
 
 // for web3
 const web3 = new Web3(window.ethereum);
@@ -46,7 +46,11 @@ function Header2() {
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasScrolling"
                 aria-controls="offcanvasScrolling"
-                style={{ display: "block", marginTop: "1rem" }}
+                style={{
+                  display: "block",
+                  marginTop: "1rem",
+                  borderColor: "white",
+                }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +65,7 @@ function Header2() {
                 </svg>
               </button>
             </div>
-            <div className="col-md-6 col-sm-6" style={{ marginTop: "0.6rem" }}>
+            <div className="col-md-6 col-sm-6" style={{ marginTop: "0.2rem" }}>
               <span className="Header2">
                 <span className="header2-svg" id="header2-svg">
                   <svg
@@ -316,7 +320,7 @@ function Header2() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item>Disconnect</Dropdown.Item>
+                  <Dropdown.Item id="dropdown-item">Disconnect</Dropdown.Item>
                   {/*     <Dropdown.Item href="#/action-2">
                     Another action
                   </Dropdown.Item>

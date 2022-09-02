@@ -41,7 +41,11 @@ function Tabnav() {
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasScrolling"
               aria-controls="offcanvasScrolling"
-              style={{ display: "block", margin: "1rem auto" }}
+              style={{
+                display: "block",
+                margin: "1rem auto",
+                borderColor: "white",
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +79,7 @@ function Tabnav() {
                       margin: "0px",
                       border: "none",
                       padding: "0px",
-                      backgroundColor: "black",
+                      backgroundColor: "#ffbd29",
                     }}
                   >
                     <img src={Image2} alt="" />
@@ -168,6 +172,7 @@ function Tabnav() {
                     color: "#fff",
                     fontWeight: "700",
                     width: "125%",
+                    borderColor: "white",
                   }}
                 >
                   SIGN UP
@@ -178,7 +183,11 @@ function Tabnav() {
                   onClick={() => {
                     handleDisplay();
                   }}
-                  style={{ color: "#fff", fontWeight: "700" }}
+                  style={{
+                    color: "#fff",
+                    fontWeight: "700",
+                    borderColor: "white",
+                  }}
                 >
                   LOGIN
                 </Button>
