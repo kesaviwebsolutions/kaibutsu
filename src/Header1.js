@@ -47,7 +47,11 @@ function Header1() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button
+                className="btn btn-outline-success"
+                type="submit"
+                style={{ color: "white" }}
+              >
                 Search
               </button>
             </form>
@@ -211,6 +215,7 @@ function Header1() {
                           color: "#fff",
                           fontWeight: "700",
                           width: "125%",
+                          borderColor: "black",
                         }}
                       >
                         SIGN UP
@@ -221,7 +226,11 @@ function Header1() {
                         onClick={() => {
                           handleDisplay();
                         }}
-                        style={{ color: "#fff", fontWeight: "700" }}
+                        style={{
+                          color: "#fff",
+                          fontWeight: "700",
+                          borderColor: "black",
+                        }}
                       >
                         LOGIN
                       </Button>

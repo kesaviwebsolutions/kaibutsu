@@ -3,15 +3,23 @@
     background-color: black;
 } */
 
-/* *{
-    background-color: black;
+/* * {
+  background-color: black;
 } */
-/* 
+html {
+  background-color: black;
+}
+/* *
 *{
     box-sizing: border-box;
     content: "";
 } */
-
+#Header2-desktop {
+  background-color: #ffbd29 !important;
+}
+#header21 {
+  background-color: #ffbd29 !important;
+}
 #dropdown-item {
   background-color: #ff9826 !important;
   color: white;
@@ -94,8 +102,14 @@ ul {
   background-color: #ffbd29 !important;
   /* border: none !important; */
   /* margin-top: 0.8rem !important; */
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
+
+.btn-primary {
+  /* border-color: black !important; */
+  box-shadow: none !important;
+}
+
 .btn svg {
   font-size: 3px !important;
 }
@@ -248,6 +262,12 @@ ul {
     display: none !important;
   }
 }
+@media screen and (min-width: 700px) {
+  .mobile-button {
+    display: none !important;
+  }
+}
+
 /* .top-meme{
     margin:1rem;
 } */
