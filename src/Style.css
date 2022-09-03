@@ -1,16 +1,16 @@
-/* *{
+/* {
     font-size: 62.5%;
     background-color: black;
 } */
 
-/* * {
+/*  {
   background-color: black;
 } */
 html {
   background-color: black;
 }
-/* *
-*{
+/* 
+{
     box-sizing: border-box;
     content: "";
 } */
@@ -30,6 +30,7 @@ html {
   background-color: #ff9826 !important;
   color: white;
   font-weight: 800;
+  text-align: center;
 }
 #dropdown-item:hover {
   background-color: #ff9826 !important;

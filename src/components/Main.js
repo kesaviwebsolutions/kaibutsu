@@ -9,6 +9,7 @@ import "../Quack.css";
 import { useNavigate } from "react-router-dom";
 import Upvote from "../Upvote.js";
 import Image50 from "../img/kesavi-logo.png";
+import Image57 from "../img/meme.jpg";
 
 $(".like").on("click", function () {
   var val = parseInt($(this).text(), 10);
@@ -66,7 +67,17 @@ function Main() {
             style={{ marginTop: "2rem" }}
           >
             <div className="first-element" style={{ marginLeft: "1rem" }}>
-              <span className="top-meme">TODAY'S TOP MEMES</span>
+              <span
+                className="top-meme"
+                style={{
+                  padding: "1rem",
+                  fontSize: "1.5rem",
+                  display: "block",
+                  textAlign: "center",
+                }}
+              >
+                TODAY'S TOP MEMES
+              </span>
               <div className="secont-element" style={{ display: "flex" }}>
                 <span className="number">#1</span>
                 <div
@@ -76,7 +87,13 @@ function Main() {
                     height: "10rem",
                     border: "0.5px dotted white",
                   }}
-                ></div>
+                >
+                  <img
+                    src={Image57}
+                    alt="/"
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
                 <span className="image11">
                   <img src={Image11} alt="/" style={{ width: "4rem" }} />
                 </span>
@@ -90,7 +107,14 @@ function Main() {
                     height: "10rem",
                     border: "0.5px dotted white",
                   }}
-                ></div>
+                >
+                  {" "}
+                  <img
+                    src={Image57}
+                    alt="/"
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
                 <span className="image11">
                   <img src={Image11} alt="/" style={{ width: "4rem" }} />
                 </span>
@@ -104,7 +128,14 @@ function Main() {
                     height: "10rem",
                     border: "0.5px dotted white",
                   }}
-                ></div>
+                >
+                  {" "}
+                  <img
+                    src={Image57}
+                    alt="/"
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
                 <span className="image11">
                   <img src={Image11} alt="/" style={{ width: "4rem" }} />
                 </span>
@@ -118,7 +149,14 @@ function Main() {
                     height: "10rem",
                     border: "0.5px dotted white",
                   }}
-                ></div>
+                >
+                  {" "}
+                  <img
+                    src={Image57}
+                    alt="/"
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
                 <span className="image11">
                   <img src={Image11} alt="/" style={{ width: "4rem" }} />
                 </span>
@@ -132,7 +170,14 @@ function Main() {
                     height: "10rem",
                     border: "0.5px dotted white",
                   }}
-                ></div>
+                >
+                  {" "}
+                  <img
+                    src={Image57}
+                    alt="/"
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
                 <span className="image11">
                   <img src={Image11} alt="/" style={{ width: "4rem" }} />
                 </span>
@@ -145,14 +190,14 @@ function Main() {
           <div className="section1 col-md-6 col-sm-6">
             <div
               style={{
-                width: "90%",
+                width: "89%",
                 border: "0.1rem dashed white",
                 borderRadius: "10px",
                 margin: "2rem auto",
                 height: "20%",
               }}
             >
-              <img src={Image50} alt="/" width="90%" height="100%" />
+              <img src={Image50} alt="/" width="100%" height="100%" />
             </div>
             <div>
               <div
@@ -169,6 +214,13 @@ function Main() {
                 }}
               >
                 <span className="box1a">
+                  <span>
+                    <img
+                      src={Image11}
+                      alt="/"
+                      style={{ width: "5%", marginLeft: "1rem" }}
+                    />{" "}
+                  </span>
                   <span style={{ color: "white", margin: "1rem" }}>
                     @Memefreak194
                   </span>
@@ -200,7 +252,15 @@ function Main() {
                   </svg>
                 </span>
                 <div className="box2" style={{ mx: "auto" }}>
-                  <img src={"#"} alt="" className="h-100" />
+                  <img
+                    src={Image57}
+                    alt=""
+                    className="h-100"
+                    style={{
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  />
                 </div>
                 <span className="box3">
                   <Upvote />
