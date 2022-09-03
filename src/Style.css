@@ -14,6 +14,12 @@ html {
     box-sizing: border-box;
     content: "";
 } */
+
+.Image50 {
+  background-image: url("C:\Users\91931\Documents\GitHub\kaibutsu\src\img\kesavi-logo.png");
+  background-repeat: repeat-y;
+}
+
 #Header2-desktop {
   background-color: #ffbd29 !important;
 }
@@ -166,6 +172,7 @@ ul {
   width: 95%;
   height: 30rem;
   margin: 8% auto;
+  border-radius: 10px;
 }
 .box3 svg {
   /* width: 15%; */
@@ -290,7 +297,7 @@ li svg {
   font-size: 2rem;
 }
 .offcanvas {
-  background-color: #ffbd29 !important;
+  background-image: linear-gradient(#ffbd29, #ff9826, #ffbd29) !important;
 }
 .secont-element {
   margin-bottom: 1rem !important;

@@ -8,6 +8,7 @@ import "../Style.css";
 import "../Quack.css";
 import { useNavigate } from "react-router-dom";
 import Upvote from "../Upvote.js";
+import Image50 from "../img/kesavi-logo.png";
 
 $(".like").on("click", function () {
   var val = parseInt($(this).text(), 10);
@@ -131,7 +132,7 @@ function Main() {
                   p: 2,
                   width: "90%",
                   border: "1px solid grey",
-                  borderRadius: "2px",
+                  borderRadius: "10px",
                   className: "box1",
                   mx: "auto",
                   margin: "2rem",
@@ -300,7 +301,23 @@ function Main() {
               </div>
             </div>
           </div>
-          <div className="col-md-3 col-sm-3"></div>
+          <div className="col-md-3 col-sm-3">
+            <div
+              style={{
+                border: "0.1rem dashed white",
+                borderRadius: "10px",
+                width: "90%",
+                marginTop: "2rem",
+              }}
+            >
+              <img src={Image50} alt="/" style={{ width: "100%" }} />
+              <img src={Image50} alt="/" style={{ width: "100%" }} />
+              <img src={Image50} alt="/" style={{ width: "100%" }} />
+              <img src={Image50} alt="/" style={{ width: "100%" }} />
+              <img src={Image50} alt="/" style={{ width: "100%" }} />
+              <img src={Image50} alt="/" style={{ width: "100%" }} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
