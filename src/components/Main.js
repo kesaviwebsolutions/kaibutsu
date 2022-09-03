@@ -8,7 +8,7 @@ import "../Style.css";
 import "../Quack.css";
 import { useNavigate } from "react-router-dom";
 import Upvote from "../Upvote.js";
-import Image50 from "../img/kesavi-logo.png";
+import Image50 from "../img/Quack-original-logo.png";
 
 $(".like").on("click", function () {
   var val = parseInt($(this).text(), 10);
