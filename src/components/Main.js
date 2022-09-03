@@ -39,9 +39,27 @@ function Main() {
   return (
     <div className="Main">
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-12 col-sm-12 ad-banner"></div>
-        </div>
+        {/* <div className="row">
+          <div className="col-md-12 col-sm-12">
+            <div
+              className="
+             col-lg-6 col-md-6 col-sm-6 col-12 
+              addBaner123"
+              style={{}}
+            >
+              <div
+                style={{
+                  width: "90%",
+                  border: "0.1rem dashed white",
+                  borderRadius: "10px",
+                  margin: "1rem auto",
+                }}
+              >
+                <img src={Image50} alt="/" width="90%" />
+              </div>
+            </div>
+          </div>
+              </div>*/}
         <div className="row">
           <div
             className=" section2 col-md-3 col-sm-3"
@@ -125,6 +143,17 @@ function Main() {
           </div>
 
           <div className="section1 col-md-6 col-sm-6">
+            <div
+              style={{
+                width: "90%",
+                border: "0.1rem dashed white",
+                borderRadius: "10px",
+                margin: "2rem auto",
+                height: "20%",
+              }}
+            >
+              <img src={Image50} alt="/" width="90%" height="100%" />
+            </div>
             <div>
               <div
                 className="Box1A"
@@ -136,6 +165,7 @@ function Main() {
                   className: "box1",
                   mx: "auto",
                   margin: "2rem",
+                  paddingTop: "0.5rem",
                 }}
               >
                 <span className="box1a">
@@ -301,7 +331,7 @@ function Main() {
               </div>
             </div>
           </div>
-          <div className="col-md-3 col-sm-3">
+          <div className="col-md-3 col-sm-3 ad-Banner-2">
             <div
               style={{
                 border: "0.1rem dashed white",

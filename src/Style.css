@@ -171,7 +171,7 @@ ul {
   border: 1px dashed white;
   width: 95%;
   height: 30rem;
-  margin: 8% auto;
+  margin: 6% auto 1%;
   border-radius: 10px;
 }
 .box3 svg {
@@ -241,6 +241,7 @@ ul {
   font-size: 2rem;
   border: 1px solid white;
   width: 20rem;
+  border-radius: 10px;
 }
 .second-element {
   display: flex;
@@ -250,6 +251,7 @@ ul {
   height: 5rem;
   border: 1px solid white;
   margin: 1rem !important;
+  border-radius: 10px;
 }
 .image11 {
   width: 5rem;
@@ -267,6 +269,9 @@ ul {
 @media screen and (max-width: 700px) {
   .first-element {
     display: none !important;
+  }
+  .ad-Banner-2 {
+    display: none;
   }
 }
 @media screen and (min-width: 700px) {
