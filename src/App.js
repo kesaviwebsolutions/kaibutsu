@@ -6,18 +6,31 @@ import Home from "./components/pages/Home";
 import Shifted from "./components/pages/Shifted";
 import Profile from "./components/pages/Profile";
 import Upvote from "./Upvote";
+import Main from "./components/Main";
+import React, { useState } from "react";
 
 function App() {
+  const [mode, setMode] = useState("light");
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+      document.body.style.backgroundColor = "black";
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "white";
+    }
+  };
   return (
     <>
       <Router>
-        <Header1 />
-        <Header2 />
+        <Header1 mode={mode} toggleMode={toggleMode} />
+        <Header2 mode={mode} />
+        <Main mode={mode} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home mode={mode} />} />
           <Route exact path="/shifted" element={<Shifted />} />
           <Route exact path="/Profile" element={<Profile />} />
-          <Route exact path="/Upvote" element={<Upvote />} />
+          <Route exact path="/Upvote" mode={mode} element={<Upvote />} />
         </Routes>
       </Router>
     </>

@@ -11,8 +11,9 @@ import "./Style.css";
 import "./Quack.css";
 import { logout } from "./actions/userActions";
 import Accordion from "react-bootstrap/Accordion";
+import PropTypes from "prop-types";
 
-function Header1() {
+function Header1(props) {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
 
@@ -32,7 +33,7 @@ function Header1() {
 
   let navigate = useNavigate();
   return (
-    <div className="header1">
+    <div className={`header1  header-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3 col-md-3 col-sm-3">
@@ -50,7 +51,7 @@ function Header1() {
               <button
                 className="btn btn-outline-success"
                 type="submit"
-                style={{ color: "white" }}
+                style={{ color: "white", display: "none" }}
               >
                 Search
               </button>
@@ -108,6 +109,28 @@ function Header1() {
                     </g>
                   </svg>
                 </li>
+                <li>
+                  {" "}
+                  <div
+                    class={`form-check form-switch  text-${
+                      props.mode === "light" ? "dark" : "light"
+                    }`}
+                  >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckChecked"
+                      onClick={props.toggleMode}
+                    />
+                    <label
+                      class="form-check-label"
+                      for="flexSwitchCheckChecked"
+                    >
+                      darkmode
+                    </label>
+                  </div>
+                </li>
 
                 {userInfo ? (
                   <li className="img2">
@@ -136,6 +159,7 @@ function Header1() {
                             type="checkbox"
                             role="switch"
                             id="flexSwitchCheckDefault"
+                            onClick={props.toggleMode}
                           />
                           <label
                             className="form-check-label"

@@ -10,7 +10,8 @@ import { useNavigate } from "react-router-dom";
 import Upvote from "../Upvote.js";
 import Image50 from "../img/kesavi-logo.png";
 import Image57 from "../img/meme.jpg";
-
+import Image62 from "../img/download.jpg";
+import PropTypes from "prop-types";
 $(".like").on("click", function () {
   var val = parseInt($(this).text(), 10);
   $(this).toggleClass("is-liked");
@@ -27,7 +28,7 @@ $(".like").on("click", function () {
 });
 // import { Grid, Button, Container, Stack, Typography, Box } from '@mui/material';
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>;
-function Main() {
+function Main(props) {
   let navigate = useNavigate();
 
   // useEffect(() => {
@@ -66,7 +67,13 @@ function Main() {
             className=" section2 col-md-3 col-sm-3"
             style={{ marginTop: "2rem" }}
           >
-            <div className="first-element" style={{ marginLeft: "1rem" }}>
+            <div
+              className="first-element"
+              style={{
+                marginLeft: "1rem",
+                borderColor: props.mode === "light" ? "black" : "white",
+              }}
+            >
               <span
                 className="top-meme"
                 style={{
@@ -74,24 +81,40 @@ function Main() {
                   fontSize: "1.5rem",
                   display: "block",
                   textAlign: "center",
+                  color: props.mode === "light" ? "black" : "white",
                 }}
               >
                 TODAY'S TOP MEMES
               </span>
-              <div className="secont-element" style={{ display: "flex" }}>
-                <span className="number">#1</span>
+              <div
+                className="secont-element"
+                style={{
+                  display: "flex",
+                  color: props.mode === "light" ? "black" : "white",
+                }}
+              >
+                <span
+                  className="number"
+                  style={{ color: props.mode === "light" ? "black" : "white" }}
+                >
+                  #1
+                </span>
                 <div
                   className="second-element-img"
                   style={{
                     width: "10rem",
                     height: "10rem",
-                    border: "0.5px dotted white",
+                    border: "0.5px dotted ",
+                    borderColor: props.mode === "light" ? "black" : "white",
                   }}
                 >
                   <img
                     src={Image57}
                     alt="/"
-                    style={{ width: "100%", borderRadius: "10px" }}
+                    style={{
+                      width: "100%",
+                      borderRadius: "10px",
+                    }}
                   />
                 </div>
                 <span className="image11">
@@ -99,55 +122,19 @@ function Main() {
                 </span>
               </div>
               <div className="secont-element" style={{ display: "flex" }}>
-                <span className="number">#2</span>
-                <div
-                  className="second-element-img"
-                  style={{
-                    width: "10rem",
-                    height: "10rem",
-                    border: "0.5px dotted white",
-                  }}
+                <span
+                  className="number"
+                  style={{ color: props.mode === "light" ? "black" : "white" }}
                 >
-                  {" "}
-                  <img
-                    src={Image57}
-                    alt="/"
-                    style={{ width: "100%", borderRadius: "10px" }}
-                  />
-                </div>
-                <span className="image11">
-                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                  #2
                 </span>
-              </div>
-              <div className="secont-element" style={{ display: "flex" }}>
-                <span className="number">#3</span>
                 <div
                   className="second-element-img"
                   style={{
                     width: "10rem",
                     height: "10rem",
-                    border: "0.5px dotted white",
-                  }}
-                >
-                  {" "}
-                  <img
-                    src={Image57}
-                    alt="/"
-                    style={{ width: "100%", borderRadius: "10px" }}
-                  />
-                </div>
-                <span className="image11">
-                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
-                </span>
-              </div>
-              <div className="secont-element" style={{ display: "flex" }}>
-                <span className="number">#4</span>
-                <div
-                  className="second-element-img"
-                  style={{
-                    width: "10rem",
-                    height: "10rem",
-                    border: "0.5px dotted white",
+                    border: "0.5px dotted ",
+                    borderColor: props.mode === "light" ? "black" : "white",
                   }}
                 >
                   {" "}
@@ -162,13 +149,73 @@ function Main() {
                 </span>
               </div>
               <div className="secont-element" style={{ display: "flex" }}>
-                <span className="number">#5</span>
+                <span
+                  className="number"
+                  style={{ color: props.mode === "light" ? "black" : "white" }}
+                >
+                  #3
+                </span>
                 <div
                   className="second-element-img"
                   style={{
                     width: "10rem",
                     height: "10rem",
-                    border: "0.5px dotted white",
+                    border: "0.5px dotted ",
+                    borderColor: props.mode === "light" ? "black" : "white",
+                  }}
+                >
+                  {" "}
+                  <img
+                    src={Image57}
+                    alt="/"
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
+                <span className="image11">
+                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                </span>
+              </div>
+              <div className="secont-element" style={{ display: "flex" }}>
+                <span
+                  className="number"
+                  style={{ color: props.mode === "light" ? "black" : "white" }}
+                >
+                  #4
+                </span>
+                <div
+                  className="second-element-img"
+                  style={{
+                    width: "10rem",
+                    height: "10rem",
+                    border: "0.5px dotted ",
+                    borderColor: props.mode === "light" ? "black" : "white",
+                  }}
+                >
+                  {" "}
+                  <img
+                    src={Image57}
+                    alt="/"
+                    style={{ width: "100%", borderRadius: "10px" }}
+                  />
+                </div>
+                <span className="image11">
+                  <img src={Image11} alt="/" style={{ width: "4rem" }} />
+                </span>
+              </div>
+              <div className="secont-element" style={{ display: "flex" }}>
+                <span
+                  className="number"
+                  style={{ color: props.mode === "light" ? "black" : "white" }}
+                >
+                  #5
+                </span>
+                <div
+                  className="second-element-img"
+                  style={{
+                    width: "10rem",
+                    height: "10rem",
+                    border: "0.5px dotted ",
+                    borderColor: props.mode === "light" ? "black" : "white",
                   }}
                 >
                   {" "}
@@ -191,13 +238,22 @@ function Main() {
             <div
               style={{
                 width: "89%",
-                border: "0.1rem dashed white",
+                border: "0.1rem dashed ",
+                borderColor: props.mode === "light" ? "black" : "white",
                 borderRadius: "10px",
                 margin: "2rem auto",
-                height: "20%",
               }}
             >
-              <img src={Image50} alt="/" width="100%" height="100%" />
+              <img
+                src={Image62}
+                alt="/"
+                style={{
+                  margin: "0 auto",
+                  display: "block",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                }}
+              />
             </div>
             <div>
               <div
@@ -205,15 +261,21 @@ function Main() {
                 style={{
                   p: 2,
                   width: "90%",
-                  border: "1px solid grey",
+                  border: "1px solid ",
                   borderRadius: "10px",
                   className: "box1",
                   mx: "auto",
                   margin: "2rem",
                   paddingTop: "0.5rem",
+                  borderColor: props.mode === "light" ? "black" : "white",
                 }}
               >
-                <span className="box1a">
+                <span
+                  className="box1a"
+                  style={{
+                    Color: props.mode === "light" ? "black" : "white",
+                  }}
+                >
                   <span>
                     <img
                       src={Image11}
@@ -221,8 +283,14 @@ function Main() {
                       style={{ width: "5%", marginLeft: "1rem" }}
                     />{" "}
                   </span>
-                  <span style={{ color: "white", margin: "1rem" }}>
-                    @Memefreak194
+                  <span
+                    style={{
+                      margin: "1rem",
+                      marginLeft: "0.5rem",
+                      color: props.mode === "light" ? "black" : "white",
+                    }}
+                  >
+                    @memefreak194
                   </span>
                   <svg
                     id="Capa_2"
@@ -251,7 +319,13 @@ function Main() {
                     </g>
                   </svg>
                 </span>
-                <div className="box2" style={{ mx: "auto" }}>
+                <div
+                  className="box2"
+                  style={{
+                    mx: "auto",
+                    borderColor: props.mode === "light" ? "black" : "white",
+                  }}
+                >
                   <img
                     src={Image57}
                     alt=""
@@ -394,10 +468,11 @@ function Main() {
           <div className="col-md-3 col-sm-3 ad-Banner-2">
             <div
               style={{
-                border: "0.1rem dashed white",
+                border: "0.1rem dashed ",
                 borderRadius: "10px",
                 width: "90%",
                 marginTop: "2rem",
+                borderColor: props.mode === "light" ? "black" : "white",
               }}
             >
               <img src={Image50} alt="/" style={{ width: "100%" }} />
