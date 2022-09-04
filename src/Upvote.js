@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { BiDislike } from "react-icons/bi";
 import "./Quack.css";
+import "./Style.css";
 const reduceOne = (prevState, groupName, otherGroupName) => {
   prevState[groupName].wasClicked
     ? (prevState[groupName].count = prevState[groupName].count - 1)
