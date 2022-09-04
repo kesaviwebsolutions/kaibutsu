@@ -39,12 +39,12 @@ class Upvote extends Component {
       <div className="Upvote">
         <p className="Upvote-intro">
           <span className="like-button" onClick={this.toggleLike}>
-            <AiOutlineLike size={30} color="white" />
+            <AiOutlineLike size={30} color="#ff9826" />
             <button>{this.state.like.count}</button>
           </span>
 
           <span className="dislike-button" onClick={this.toggleDislike}>
-            <BiDislike size={30} color="white" margin="2rem" />
+            <BiDislike size={30} color="#ff9826" margin="2rem" />
             <button>{this.state.dislike.count}</button>
           </span>
         </p>
