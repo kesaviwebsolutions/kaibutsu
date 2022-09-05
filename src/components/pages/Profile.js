@@ -13,8 +13,8 @@ function Profile(props) {
   const { userInfo } = userLogin;
 
   return (
-    <>
-      <div className="outer-box" id="sy">
+    <div>
+      <div className={`OuterBox12 OuterBox12-${props.mode} `} id="sy">
         <div
           className="inner-box"
           style={{
@@ -91,7 +91,7 @@ function Profile(props) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

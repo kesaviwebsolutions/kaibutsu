@@ -7,8 +7,8 @@ div .row {
 
 .inner-box {
   border-radius: 7px;
-  color: #0f3c4b;
-  background-color: #e5edf1;
+
+  background-image: linear-gradient(#ff9826, #ffbd29, #ff9826) !important;
   outline: 1px dashed gray;
   outline-offset: -6px;
   box-shadow: 0 4px 10px 4px rgb(19 35 47 / 30%);
@@ -65,4 +65,17 @@ div .row {
   width: 1rem;
   margin: 0.5rem;
   fill: #ff9826 !important;
+}
+.ui-profile-blank {
+  padding: 2rem;
+}
+h2 {
+  text-align: center;
+  margin: 2rem;
+}
+.ui-profile-blank__content {
+  text-align: center;
+}
+.btn-color-primary {
+  background-color: black;
 }

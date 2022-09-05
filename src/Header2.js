@@ -409,8 +409,8 @@ function Header2({ Metamask, user, account, Disconnect }) {
                   onClick={handleShow}
                   style={{
                     display: "block",
-                    float: "left",
-                    marginTop: "1rem",
+
+                    margin: "1rem auto !important",
                     fontSize: "1rem",
                     color: " #ff9826",
                     fontWeight: "800",

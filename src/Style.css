@@ -182,8 +182,8 @@ ul {
 }
 .box3 button {
   border: none;
-  /* background-color: black; */
-  color: black;
+  background-color: transparent !important;
+  color: #ff9826;
 }
 /* .Main {
   background-color: black;
@@ -339,7 +339,7 @@ li svg {
 }
 ul,
 li {
-  margin: auto 1.2rem;
+  margin-top: auto;
   cursor: pointer;
 }
 .ad-banner {
@@ -362,3 +362,6 @@ li {
 #connect-wallet {
   background-color: white !important;
 }
+/* #connect-wallet1 {
+  margin: 1rem auto !important;
+} */

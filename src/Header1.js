@@ -69,7 +69,7 @@ function Header1(props) {
           <div className="col-lg-4 col-md-3 col-sm-3">
             <span>
               <ul style={{ margin: "2rem auto" }}>
-                <li className="notification-button">
+                {/* <li className="notification-button">
                   <svg
                     id="Capa_2"
                     xmlns="http://www.w3.org/2000/svg"
@@ -82,8 +82,8 @@ function Header1(props) {
                       />
                     </g>
                   </svg>
-                </li>
-                <Link to="/Profile" style={{ marginTop: "1.8rem" }}>
+  </li>*/}
+                <Link to="/Profile" style={{}}>
                   <li className="add-button">
                     <svg
                       id="Capa_2"
@@ -99,7 +99,7 @@ function Header1(props) {
                     </svg>
                   </li>
                 </Link>
-                <li className="saved-button">
+                {/*  <li className="saved-button">
                   <svg
                     id="Capa_2"
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ function Header1(props) {
                       />
                     </g>
                   </svg>
-                </li>
+  </li>*/}
                 <li>
                   {" "}
                   <div
@@ -120,7 +120,7 @@ function Header1(props) {
                       props.mode === "light" ? "dark" : "light"
                     }`}
                   >
-                    <BsFillSunFill onClick={props.toggleMode} size={30}/>
+                    <BsFillSunFill onClick={props.toggleMode} size={30} />
 
                     {/* <input
                       class="form-check-input"
@@ -251,107 +251,12 @@ function Header1(props) {
                         LOGIN
                       </Button>
                     </li>
-                    <li className="img2">
-                      <div className="dropdown">
-                        <button
-                          className="dropbtn"
-                          style={{
-                            margin: "0px",
-                            border: "none",
-                            padding: "0px",
-                            backgroundColor: "black",
-                          }}
-                        >
-                          <img src={Image2} alt="" />
-                        </button>
-                        <div className="dropdown-content">
-                          <Link to="/profile">
-                            {" "}
-                            <p style={{ cursor: "pointer" }}>My Profile</p>
-                          </Link>
-                          <p style={{ cursor: "pointer" }}>Saved</p>
-                          <p style={{ cursor: "pointer" }}>Setting</p>
-                          <div className="form-check form-switch">
-                            <input
-                              className="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="flexSwitchCheckDefault"
-                              onClick={props.toggleMode}
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="flexSwitchCheckDefault"
-                            >
-                              Dark Mode
-                            </label>
-                          </div>
-                          <p
-                            style={{ cursor: "pointer" }}
-                            onClick={() => {
-                              handleLogout();
-                            }}
-                          >
-                            Download Quack
-                          </p>
-                          <p
-                            style={{ cursor: "pointer" }}
-                            onClick={() => {
-                              handleLogout();
-                            }}
-                          >
-                            Help Center
-                          </p>
-                          <p
-                            style={{ cursor: "pointer" }}
-                            onClick={() => {
-                              handleLogout();
-                            }}
-                          >
-                            Report Problems
-                          </p>
-                          <div>
-                            <Accordion defaultActiveKey="0 ">
-                              <Accordion.Item eventKey="0 ">
-                                <Accordion.Header className="bg-none">
-                                  Terms & Policies
-                                </Accordion.Header>
-                                <Accordion.Body>Terms</Accordion.Body>
-                                <Accordion.Body>Policy</Accordion.Body>
-                                <Accordion.Body>Copyright</Accordion.Body>
-                              </Accordion.Item>
-                              <Accordion.Item eventKey="1">
-                                <Accordion.Header>Advertise</Accordion.Header>
-                                <Accordion.Body>
-                                  Advertise on Quack
-                                </Accordion.Body>
-                                <Accordion.Body>Reports ads</Accordion.Body>
-                              </Accordion.Item>
-                              <Accordion.Item eventKey="2">
-                                <Accordion.Header>Contact</Accordion.Header>
-                                <Accordion.Body>Career</Accordion.Body>
-                                <Accordion.Body>Business</Accordion.Body>
-                              </Accordion.Item>
-                            </Accordion>
-                          </div>
-
-                          <p
-                            style={{ cursor: "pointer" }}
-                            onClick={() => {
-                              handleLogout();
-                            }}
-                          >
-                            Logout
-                          </p>
-                        </div>
-                      </div>
-                    </li>
                   </>
                 )}
 
-                <Link to="/shifted">
-                  <li>shifted</li>
-                </Link>
+                {/* <Link to="/shifted">
+                <li>shifted</li>
+                      </Link> */}
               </ul>
             </span>
           </div>

@@ -47,9 +47,11 @@ div .row {
   text-decoration: none;
   display: block;
 }
-.form-check {
+
+/*.form-check {
   margin-bottom: 1rem !important;
-}
+}*/
+
 .accordion {
   margin-bottom: 1rem !important;
 }

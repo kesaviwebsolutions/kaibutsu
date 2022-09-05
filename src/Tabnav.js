@@ -69,9 +69,8 @@ function Tabnav() {
               />
             </span>
           </div>
-          <div className="col-4">
-            <ul>
-              <li className="img2">
+          <div className="col-4" style={{ marginTop: "1.2rem" }}>
+            {/*<li className="img2">
                 <div className="dropdown">
                   <button
                     className="dropbtn"
@@ -162,37 +161,38 @@ function Tabnav() {
                     </p>
                   </div>
                 </div>
-              </li>
-              <li>
-                <Button
-                  onClick={() => {
-                    handleShow();
-                  }}
-                  style={{
-                    color: "#fff",
-                    fontWeight: "700",
-                    width: "125%",
-                    borderColor: "white",
-                  }}
-                >
-                  SIGN UP
-                </Button>
-              </li>
-              <li>
-                <Button
-                  onClick={() => {
-                    handleDisplay();
-                  }}
-                  style={{
-                    color: "#fff",
-                    fontWeight: "700",
-                    borderColor: "white",
-                  }}
-                >
-                  LOGIN
-                </Button>
-              </li>
-            </ul>
+                    </li>*/}
+            <span>
+              <Button
+                onClick={() => {
+                  handleShow();
+                }}
+                style={{
+                  color: "#fff",
+                  fontWeight: "700",
+                  width: "42%",
+                  borderColor: "white",
+                }}
+              >
+                SIGN UP
+              </Button>
+            </span>
+
+            <span>
+              <Button
+                onClick={() => {
+                  handleDisplay();
+                }}
+                style={{
+                  color: "#fff",
+                  fontWeight: "700",
+                  borderColor: "white",
+                }}
+              >
+                LOGIN
+              </Button>
+            </span>
+
             {/* <!-- Modal sign up --> */}
 
             <Modal
