@@ -7,6 +7,7 @@ import SingUp from "./SignUp";
 import Login from "./Login";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { BsFillSunFill, BsMoon } from "react-icons/bs";
 import "./Style.css";
 import "./Quack.css";
 import { logout } from "./actions/userActions";
@@ -16,6 +17,7 @@ import PropTypes from "prop-types";
 function Header1(props) {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
+  const [mode, setMode] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleHide = () => setShow2(false);
@@ -114,23 +116,24 @@ function Header1(props) {
                 <li>
                   {" "}
                   <div
-                    class={`form-check form-switch  text-${
+                    className={`form-check form-switch  text-${
                       props.mode === "light" ? "dark" : "light"
                     }`}
                   >
-                    <input
+                    <BsFillSunFill onClick={props.toggleMode} size={30}/>
+
+                    {/* <input
                       class="form-check-input"
                       type="checkbox"
                       role="switch"
                       id="flexSwitchCheckChecked"
-                      onClick={props.toggleMode}
                     />
                     <label
                       class="form-check-label"
                       for="flexSwitchCheckChecked"
                     >
                       darkmode
-                    </label>
+                    </label> */}
                   </div>
                 </li>
 
@@ -155,21 +158,6 @@ function Header1(props) {
                         </Link>
                         <p style={{ cursor: "pointer" }}>Saved</p>
                         <p style={{ cursor: "pointer" }}>Setting</p>
-                        <div className="form-check form-switch">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="flexSwitchCheckDefault"
-                            onClick={props.toggleMode}
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="flexSwitchCheckDefault"
-                          >
-                            Dark Mode
-                          </label>
-                        </div>
                         <p
                           style={{ cursor: "pointer" }}
                           onClick={() => {
