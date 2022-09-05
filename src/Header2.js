@@ -266,32 +266,12 @@ function Header2({ Metamask, user, account, Disconnect }) {
                 </span>
               </div>
               <div className="col-md-3 col-sm-3">
-                <Button
-                  className="btn-primary connect-wallet"
-                  id="connect-wallet"
-                  variant="primary"
-                  onClick={handleShow}
-                  style={{
-                    display: "block",
-                    float: "left",
-                    marginTop: "1rem",
-                    fontSize: "1rem",
-                    color: " #ff9826",
-                    fontWeight: "800",
-                    border: "none",
-                    backgroundColor: "white !important",
-                    borderRadius: "10px",
-                  }}
-                >
-                  Connect Wallet
-                </Button>
-
-                {/*    {!user ? (
-                  <button
-                    type="button"
+                {!user ? (
+                  <Button
                     className="btn-primary connect-wallet"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
+                    id="connect-wallet"
+                    variant="primary"
+                    onClick={handleShow}
                     style={{
                       display: "block",
                       float: "left",
@@ -300,12 +280,12 @@ function Header2({ Metamask, user, account, Disconnect }) {
                       color: " #ff9826",
                       fontWeight: "800",
                       border: "none",
-                      backgroundColor: "white",
+                      backgroundColor: "white !important",
                       borderRadius: "10px",
                     }}
                   >
                     Connect Wallet
-                  </button>
+                  </Button>
                 ) : (
                   <Dropdown>
                     <Dropdown.Toggle
@@ -337,7 +317,7 @@ function Header2({ Metamask, user, account, Disconnect }) {
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                    )}*/}
+                )}
               </div>
             </div>
           </div>
@@ -377,6 +357,7 @@ function Header2({ Metamask, user, account, Disconnect }) {
                     className="w-25 px-3 py-3"
                     onClick={() => {
                       Metamask();
+                      setShow(false);
                     }}
                   />
                   <img
@@ -391,77 +372,9 @@ function Header2({ Metamask, user, account, Disconnect }) {
               </div>
             </Modal.Body>
           </Modal>
+
           {/*MODAL  */}
-          <div
-            className="modal fade"
-            id="staticBackdrop"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabIndex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-          >
-            <div className="modal-dialog modal-dialog-centered">
-              <div className="modal-content background">
-                <div className="modal-header">
-                  <h5
-                    className="modal-title ms-auto text-light"
-                    id="staticBackdropLabel"
-                  >
-                    Please Connect Your Wallet
-                  </h5>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                // comment from ...................................
-                <div className="modal-body">
-                  <div
-                    className="wallet-images"
-                    style={{
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-around",
-                    }}
-                  >
-                    <img
-                      src={meta}
-                      alt=""
-                      className="w-25 px-3 py-3"
-                      onClick={() => {
-                        Metamask();
-                      }}
-                    />
-                    <img
-                      src={wallet}
-                      alt=""
-                      className="w-25 px-3 py-3"
-                      // onClick={() => {
-                      //   WalletC()
-                      // }}
-                    />
-                  </div>
-                </div>
-                {/* <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary autoClose"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" className="btn btn-primary">
-                Save changes
-              </button>
-            </div> */}
-              </div>
-            </div>
-          </div>
-          //////////////////comment to there///////////////////////////
+
           <div
             className="offcanvas offcanvas-start"
             data-bs-scroll="true"
@@ -487,30 +400,27 @@ function Header2({ Metamask, user, account, Disconnect }) {
               <div>Cloud chat</div>
               <div>Whitepaper</div>
               <div>Audit</div>
-              {!user ? (
-                <div className="mobile-button">
-                  {" "}
-                  <button
-                    type="button"
-                    className="btn-primary connect-wallet"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                    style={{
-                      display: "block",
 
-                      marginTop: "1rem",
-                      fontSize: "1rem",
-                      color: " #ff9826",
-                      fontWeight: "800",
-                      border: "none",
-                      backgroundColor: "white",
-                      borderRadius: "10px",
-                      margin: "1rem auto",
-                    }}
-                  >
-                    Connect Wallet
-                  </button>
-                </div>
+              {!user ? (
+                <Button
+                  className="btn-primary connect-wallet"
+                  id="connect-wallet"
+                  variant="primary"
+                  onClick={handleShow}
+                  style={{
+                    display: "block",
+                    float: "left",
+                    marginTop: "1rem",
+                    fontSize: "1rem",
+                    color: " #ff9826",
+                    fontWeight: "800",
+                    border: "none",
+                    backgroundColor: "white !important",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Connect Wallet
+                </Button>
               ) : (
                 <div>
                   {" "}
