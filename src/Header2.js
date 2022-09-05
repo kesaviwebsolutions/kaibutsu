@@ -1,10 +1,12 @@
-import React from "react";
 import meta from "./img/meta.png";
 import wallet from "./img/connect.svg";
 import Tabnav from "./Tabnav";
 import Dropdown from "react-bootstrap/Dropdown";
 import "./Style.css";
 import "./Quack.css";
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 function Header2({ Metamask, user, account, Disconnect }) {
   const sliceAdd = (address) => {
@@ -12,6 +14,10 @@ function Header2({ Metamask, user, account, Disconnect }) {
     const second = address.slice(38);
     return first + "..." + second;
   };
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <section>
@@ -260,7 +266,27 @@ function Header2({ Metamask, user, account, Disconnect }) {
                 </span>
               </div>
               <div className="col-md-3 col-sm-3">
-                {!user ? (
+                <Button
+                  className="btn-primary connect-wallet"
+                  id="connect-wallet"
+                  variant="primary"
+                  onClick={handleShow}
+                  style={{
+                    display: "block",
+                    float: "left",
+                    marginTop: "1rem",
+                    fontSize: "1rem",
+                    color: " #ff9826",
+                    fontWeight: "800",
+                    border: "none",
+                    backgroundColor: "white !important",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Connect Wallet
+                </Button>
+
+                {/*    {!user ? (
                   <button
                     type="button"
                     className="btn-primary connect-wallet"
@@ -311,17 +337,61 @@ function Header2({ Metamask, user, account, Disconnect }) {
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                )}
+                    )}*/}
               </div>
             </div>
           </div>
-
           {/* .................................................................................... */}
-
           <Tabnav />
-
+          {/*Modal*/}
+          <Modal
+            show={show}
+            onHide={handleClose}
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-vcenter">
+                <h5
+                  className="modal-title ms-auto text-light"
+                  id="staticBackdropLabel"
+                >
+                  Please Connect Your Wallet
+                </h5>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <div className="modal-body">
+                <div
+                  className="wallet-images"
+                  style={{
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <img
+                    src={meta}
+                    alt=""
+                    className="w-25 px-3 py-3"
+                    onClick={() => {
+                      Metamask();
+                    }}
+                  />
+                  <img
+                    src={wallet}
+                    alt=""
+                    className="w-25 px-3 py-3"
+                    // onClick={() => {
+                    //   WalletC()
+                    // }}
+                  />
+                </div>
+              </div>
+            </Modal.Body>
+          </Modal>
           {/*MODAL  */}
-
           <div
             className="modal fade"
             id="staticBackdrop"
@@ -347,6 +417,7 @@ function Header2({ Metamask, user, account, Disconnect }) {
                     aria-label="Close"
                   ></button>
                 </div>
+                // comment from ...................................
                 <div className="modal-body">
                   <div
                     className="wallet-images"
@@ -376,21 +447,21 @@ function Header2({ Metamask, user, account, Disconnect }) {
                   </div>
                 </div>
                 {/* <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary autoClose"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" className="btn btn-primary">
-                  Save changes
-                </button>
-              </div> */}
+              <button
+                type="button"
+                className="btn btn-secondary autoClose"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" className="btn btn-primary">
+                Save changes
+              </button>
+            </div> */}
               </div>
             </div>
           </div>
-
+          //////////////////comment to there///////////////////////////
           <div
             className="offcanvas offcanvas-start"
             data-bs-scroll="true"

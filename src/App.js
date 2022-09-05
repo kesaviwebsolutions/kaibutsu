@@ -7,11 +7,7 @@ import Shifted from "./components/pages/Shifted";
 import Profile from "./components/pages/Profile";
 import Upvote from "./Upvote";
 import React, { useState, useEffect } from "react";
-import {
-  DisconnectWallet,
-  getAccount,
-  MetaMasklogin,
-} from "./Web3/Balance";
+import { DisconnectWallet, getAccount, MetaMasklogin } from "./Web3/Balance";
 
 function App() {
   const [mode, setMode] = useState("dark");
@@ -67,7 +63,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home mode={mode} />} />
           <Route exact path="/shifted" element={<Shifted />} />
-          <Route exact path="/Profile" element={<Profile />} />
+          <Route exact path="/Profile" element={<Profile mode={mode} />} />
           <Route exact path="/Upvote" element={<Upvote mode={mode} />} />
         </Routes>
       </Router>

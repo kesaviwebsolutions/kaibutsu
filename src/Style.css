@@ -356,3 +356,9 @@ li {
   margin: 0.5rem;
   font-size: 1.5rem;
 }
+.modal-title {
+  margin-left: auto !important;
+}
+#connect-wallet {
+  background-color: white !important;
+}

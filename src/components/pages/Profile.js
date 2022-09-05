@@ -7,7 +7,7 @@ import Image70 from "../../../src/img/image-100.jpg";
 import Image80 from "../../../src/img/images-200.jpg";
 import { logout } from "../../actions/userActions";
 
-function Profile() {
+function Profile(props) {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
