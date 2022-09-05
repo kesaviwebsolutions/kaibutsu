@@ -30,7 +30,7 @@ function App() {
           <Route exact path="/" element={<Home mode={mode} />} />
           <Route exact path="/shifted" element={<Shifted />} />
           <Route exact path="/Profile" element={<Profile />} />
-          <Route exact path="/Upvote" mode={mode} element={<Upvote />} />
+          <Route exact path="/Upvote" element={<Upvote mode={mode} />} />
         </Routes>
       </Router>
     </>

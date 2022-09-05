@@ -39,8 +39,19 @@ function Home(props) {
   // }, [navigate]);
 
   return (
-    <div className="Main">
-      <div className="container-fluid">
+    <div
+      className={`Main  main-${props.mode} bg-${props.mode}`}
+      // style={{
+      //   backgroundColor: props.mode === "light" ? "black" : "white",
+      //   backgroundColor: "black",
+      // }}
+    >
+      <div
+        className="container-fluid"
+        // style={{
+        //   backgroundColor: props.mode === "light" ? "black" : "white",
+        // }}
+      >
         {/* <div className="row">
           <div className="col-md-12 col-sm-12">
             <div
