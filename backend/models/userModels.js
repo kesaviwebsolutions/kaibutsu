@@ -25,6 +25,9 @@ const userSchema = mongoose.Schema({
     default:
       "http://localhost:3000/static/media/quack.33e582ca1919e50bb8b1.png",
   },
+  uploadImg : {
+    
+  }
 });
 
 userSchema.pre("save", async function (next) {

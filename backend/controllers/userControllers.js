@@ -1,6 +1,8 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../models/userModels");
 const generateToken = require("../utils/generateToken");
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
 // register
 
 const registerUser = asyncHandler(async (req, res) => {
@@ -56,5 +58,7 @@ const authUser = asyncHandler(async (req, res) => {
     throw new Error("Invalid Email or Password!");
   }
 });
+
+
 
 module.exports = { registerUser, authUser };
