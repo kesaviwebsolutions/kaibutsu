@@ -9,7 +9,7 @@ import Upvote from "./Upvote";
 import React, { useState, useEffect } from "react";
 import {
   DisconnectWallet,
-  getUserAddress,
+  getAccount,
   MetaMasklogin,
 } from "./Web3/Balance";
 
@@ -25,11 +25,12 @@ function App() {
         await Metamask();
       }
     };
-  });
+    init();
+  }, []);
 
   const Metamask = async () => {
     await MetaMasklogin();
-    const add = await getUserAddress();
+    const add = await getAccount();
     window.localStorage.setItem("wallet", "wallet");
     setAccount(add);
     setUser(add);
@@ -41,6 +42,7 @@ function App() {
     setUser(undefined);
     window.localStorage.removeItem("wallet");
   };
+
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");

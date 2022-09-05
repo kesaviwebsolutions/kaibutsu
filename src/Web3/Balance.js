@@ -14,6 +14,11 @@ var provider = new WalletConnectProvider({
 
 console.log(web3);
 
+export const getAccount = async () => {
+  const web3 = new Web3(window.ethereum);
+  const account = await web3.eth.getAccounts();
+  return account[0];
+};
 
 export const DisconnectWallet = async () => {
   await provider.disconnect();
@@ -23,13 +28,4 @@ export const MetaMasklogin = async () => {
   const data = await window.ethereum.enable()
   web3 = new Web3(window.ethereum)
   return data[0]
-}
-
-export const getUserAddress = async () => {
-  try {
-    const address = await web3.eth.getAccounts()
-    return address[0]
-  } catch (error) {
-    console.log(error)
-  }
 }

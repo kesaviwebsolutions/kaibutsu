@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import meta from "./img/meta.png";
-import { getAccount, DisconnectWallet } from "./Web3/Balance";
 import wallet from "./img/connect.svg";
 import Tabnav from "./Tabnav";
 import Dropdown from "react-bootstrap/Dropdown";
 import "./Style.css";
 import "./Quack.css";
 
-function Header2() {
+function Header2({ Metamask, user, account, Disconnect }) {
+  const sliceAdd = (address) => {
+    const first = address.slice(0, 4);
+    const second = address.slice(38);
+    return first + "..." + second;
+  };
   return (
     <>
       <section>
@@ -256,30 +260,12 @@ function Header2() {
                 </span>
               </div>
               <div className="col-md-3 col-sm-3">
-                <button
-                  type="button"
-                  className="btn-primary connect-wallet"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  style={{
-                    display: "block",
-                    float: "left",
-                    marginTop: "1rem",
-                    fontSize: "1rem",
-                    color: " #ff9826",
-                    fontWeight: "800",
-                    border: "none",
-                    backgroundColor: "white",
-                    borderRadius: "10px",
-                  }}
-                >
-                  Connect Wallet
-                </button>
-
-                <Dropdown>
-                  <Dropdown.Toggle
-                    variant="success"
-                    id="dropdown-basic"
+                {!user ? (
+                  <button
+                    type="button"
+                    className="btn-primary connect-wallet"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
                     style={{
                       display: "block",
                       float: "left",
@@ -288,25 +274,44 @@ function Header2() {
                       color: " #ff9826",
                       fontWeight: "800",
                       border: "none",
-                      backgroundColor: "white !important",
+                      backgroundColor: "white",
                       borderRadius: "10px",
-                      marginLeft: "1rem",
                     }}
-                    className="dropdown123"
                   >
-                    Dropdown Button
-                  </Dropdown.Toggle>
+                    Connect Wallet
+                  </button>
+                ) : (
+                  <Dropdown>
+                    <Dropdown.Toggle
+                      variant="success"
+                      id="dropdown-basic"
+                      style={{
+                        display: "block",
+                        float: "left",
+                        marginTop: "1rem",
+                        fontSize: "1rem",
+                        color: " #ff9826",
+                        fontWeight: "800",
+                        border: "none",
+                        backgroundColor: "white !important",
+                        borderRadius: "10px",
+                        marginLeft: "1rem",
+                      }}
+                      className="dropdown123"
+                    >
+                      {sliceAdd(user)}
+                    </Dropdown.Toggle>
 
-                  <Dropdown.Menu style={{ width: "92%" }}>
-                    <Dropdown.Item id="dropdown-item">Disconnect</Dropdown.Item>
-                    {/*     <Dropdown.Item href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
-              </Dropdown.Item>*/}
-                  </Dropdown.Menu>
-                </Dropdown>
+                    <Dropdown.Menu style={{ width: "92%" }}>
+                      <Dropdown.Item
+                        id="dropdown-item"
+                        onClick={() => Disconnect()}
+                      >
+                        Disconnect
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                )}
               </div>
             </div>
           </div>
@@ -356,9 +361,9 @@ function Header2() {
                       src={meta}
                       alt=""
                       className="w-25 px-3 py-3"
-                      // onClick={() => {
-                      //   Metamask()
-                      // }}
+                      onClick={() => {
+                        Metamask();
+                      }}
                     />
                     <img
                       src={wallet}
@@ -411,62 +416,64 @@ function Header2() {
               <div>Cloud chat</div>
               <div>Whitepaper</div>
               <div>Audit</div>
-              <div className="mobile-button">
-                {" "}
-                <button
-                  type="button"
-                  className="btn-primary connect-wallet"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  style={{
-                    display: "block",
-
-                    marginTop: "1rem",
-                    fontSize: "1rem",
-                    color: " #ff9826",
-                    fontWeight: "800",
-                    border: "none",
-                    backgroundColor: "white",
-                    borderRadius: "10px",
-                    margin: "1rem auto",
-                  }}
-                >
-                  Connect Wallet
-                </button>
-              </div>
-              <div>
-                {" "}
-                <Dropdown className="mobile-button">
-                  <Dropdown.Toggle
-                    variant="success"
-                    id="dropdown-basic"
-                    className="mobile-button dropdown123"
+              {!user ? (
+                <div className="mobile-button">
+                  {" "}
+                  <button
+                    type="button"
+                    className="btn-primary connect-wallet"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
                     style={{
                       display: "block",
-                      margin: "1rem auto",
 
+                      marginTop: "1rem",
                       fontSize: "1rem",
                       color: " #ff9826",
                       fontWeight: "800",
                       border: "none",
-                      backgroundColor: "white !important",
+                      backgroundColor: "white",
                       borderRadius: "10px",
+                      margin: "1rem auto",
                     }}
                   >
-                    Dropdown Button
-                  </Dropdown.Toggle>
+                    Connect Wallet
+                  </button>
+                </div>
+              ) : (
+                <div>
+                  {" "}
+                  <Dropdown className="mobile-button">
+                    <Dropdown.Toggle
+                      variant="success"
+                      id="dropdown-basic"
+                      className="mobile-button dropdown123"
+                      style={{
+                        display: "block",
+                        margin: "1rem auto",
 
-                  <Dropdown.Menu>
-                    <Dropdown.Item id="dropdown-item">Disconnect</Dropdown.Item>
-                    {/*     <Dropdown.Item href="#/action-2">
-                Another action
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-3">
-                Something else
-          </Dropdown.Item>*/}
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
+                        fontSize: "1rem",
+                        color: " #ff9826",
+                        fontWeight: "800",
+                        border: "none",
+                        backgroundColor: "white !important",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {sliceAdd(user)}
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item
+                        id="dropdown-item"
+                        onClick={() => Disconnect()}
+                      >
+                        Disconnect
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+              )}
             </div>
           </div>
         </div>
