@@ -10,7 +10,7 @@ import Main from "./components/Main";
 import React, { useState } from "react";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
@@ -25,7 +25,7 @@ function App() {
       <Router>
         <Header1 mode={mode} toggleMode={toggleMode} />
         <Header2 mode={mode} />
-        <Main mode={mode} />
+
         <Routes>
           <Route exact path="/" element={<Home mode={mode} />} />
           <Route exact path="/shifted" element={<Shifted />} />
