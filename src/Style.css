@@ -266,6 +266,7 @@ ul {
   font-size: 1.5rem;
   display: block;
 }
+
 @media screen and (max-width: 700px) {
   .first-element {
     display: none !important;
@@ -277,6 +278,9 @@ ul {
 @media screen and (min-width: 700px) {
   .mobile-button {
     display: none !important;
+  }
+  .btn-primary.connect-wallet.siderbarwallet {
+    display: none;
   }
 }
 

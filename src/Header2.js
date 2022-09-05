@@ -403,14 +403,11 @@ function Header2({ Metamask, user, account, Disconnect }) {
 
               {!user ? (
                 <Button
-                  className="btn-primary connect-wallet"
+                  className="btn-primary connect-wallet siderbarwallet"
                   id="connect-wallet"
                   variant="primary"
                   onClick={handleShow}
                   style={{
-                    display: "block",
-
-                    margin: "1rem auto !important",
                     fontSize: "1rem",
                     color: " #ff9826",
                     fontWeight: "800",
@@ -430,9 +427,6 @@ function Header2({ Metamask, user, account, Disconnect }) {
                       id="dropdown-basic"
                       className="mobile-button dropdown123"
                       style={{
-                        display: "block",
-                        margin: "1rem auto",
-
                         fontSize: "1rem",
                         color: " #ff9826",
                         fontWeight: "800",
