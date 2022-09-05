@@ -51,35 +51,47 @@ function Profile() {
           <div className="tab">
             {" "}
             <Tabs
-              defaultActiveKey="profile"
+              defaultActiveKey="Posts"
               id="uncontrolled-tab-example"
               className="mb-3"
             >
-              <Tab
-                eventKey="Posts"
-                title="Posts"
-                style={{
-                  width: "100%",
-                  height: "15rem",
-                  backgroundColor: "#F0F0F0",
-                }}
-                active
-              ></Tab>
-              <Tab eventKey="Comments" title="Comments">
-                <div className="post">
-                  <span>No Posts</span>
-                  <br></br>
-                  <span>Let's make something creative for fun!</span>
-                  <br></br>
+              <Tab eventKey="Posts" title="Posts">
+                <div className="ui-profile-blank">
+                  <h2>No Posts</h2>
+                  <div className="ui-profile-blank__content">
+                    <h3>Let’s make something creative for fun!</h3>
+                    <button className="ui-btn btn-color-primary">
+                      <div className="ui-base-icon" data-v-e9db3ad8="">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 13 13"
+                          role="presentation"
+                          data-v-e9db3ad8=""
+                        >
+                          <g fill="white" data-v-e9db3ad8="">
+                            <path d="M0 10.5V13H2.5L9.87333 5.62665L7.37333 3.12666L0 10.5ZM11.8067 3.69332C12.0667 3.43332 12.0667 3.01332 11.8067 2.75332L10.2467 1.19332C9.98667 0.933322 9.56667 0.933322 9.30667 1.19332L8.08667 2.41332L10.5867 4.91332L11.8067 3.69332Z"></path>
+                          </g>
+                        </svg>
+                      </div>{" "}
+                      Post{" "}
+                    </button>
+                  </div>
                 </div>
               </Tab>
-              <Tab eventKey="Upvotes" title="Upvotes"></Tab>
-              <Tab eventKey="Saved" title="Saved"></Tab>
+              <Tab eventKey="Comments" title="Comments">
+                bbbbbbbbbbbb
+              </Tab>
+              <Tab eventKey="Upvotes" title="Upvotes">
+                ccccccccccccc
+              </Tab>
+              <Tab eventKey="Saved" title="Saved">
+                dddddddddddd
+              </Tab>
             </Tabs>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
